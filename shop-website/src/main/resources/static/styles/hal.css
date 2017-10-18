@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body{margin:0px;}
+*{font-family: 'Merriweather', serif;}
+ul,li{
+	margin:0px; padding:0px;
+	list-style-type:none;
+}
+p{margin:0px;}
+img{border:0px;}
+a:link{ text-decoration:none; text-decoration:none;}
+a:hover{}
+a:visited{}
+
+h1.h2,h3,h4,h5{margin:0px;}
+table{border-collapse:collapse;}
+
+body,html{height:100%;}
+
+
+
+.all{
+	
+	height:70%;
+	width:100%;
+	background-image:url('../images/asd.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:40% 60%;
+	align:center;
+	
+	
+}	
+	
+	
+
+.in div{		
+	position:absolute;
+	top:60%;
+	left:40%;
+	right:40%;
+	align:center;
+	
+}
