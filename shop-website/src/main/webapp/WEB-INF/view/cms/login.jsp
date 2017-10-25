@@ -18,11 +18,11 @@
 		<div>
 			  <strong style="font-size:30px;">LOGIN</strong>
 			  
-			  <br />
+			  <br/>
 
 			  <input type="text" placeholder="아이디" id="userid" name="userid" class="f" style="height:40px; margin-top:10%;"/>
 			  
-			  <br />
+			  <br/>
 			  
 			  <input type="password" placeholder="비밀번호" id="password" name="password"style="height:40px; margin-top:10%;">
 			    		  	     
@@ -33,7 +33,5 @@
 	     </div>	
 	</div> 
 </div>
-
-
 </body>
 </html>
