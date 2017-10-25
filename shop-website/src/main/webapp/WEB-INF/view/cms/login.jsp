@@ -26,9 +26,10 @@
 			  
 			  <input type="password" placeholder="비밀번호" id="password" name="password"style="height:40px; margin-top:10%;">
 			    		  	     
-		
+			  <form ACTION="loginProcess.jsp" method="get">
 			  <input type="submit" value="로그인" style="font-size:20px; height:120px; width:120px;
-			 	position:absolute; bottom:-1%; margin-left:20px"> 
+			 	position:absolute; bottom:-1%; margin-left:20px">
+			  </form> 
 	     </div>	
 	</div> 
 </div>
