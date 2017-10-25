@@ -1,6 +1,6 @@
 package kr.ac.dy.it.shop.biz.model;
 
-import kr.co.uniwiz.app.dentiste.common.util.StringUtils;
+import kr.ac.dy.it.shop.common.util.StringUtils;
 import lombok.Data;
 import lombok.ToString;
 
