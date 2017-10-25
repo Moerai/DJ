@@ -12,7 +12,7 @@
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 
-	<h1> 회원관리 - 회원관리 </h1>
+	<h1> 중고장터 관리 - 상품리스트 </h1>
 
 
 </body>
