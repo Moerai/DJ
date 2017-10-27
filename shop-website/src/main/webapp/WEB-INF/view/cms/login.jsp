@@ -12,7 +12,7 @@
 <body>
 
 
-	
+	log
 <div class = "all">
 	<div class="in">
 		<div>

@@ -12,7 +12,7 @@
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 
-	<h1> 고객센터 - 공지사항 </h1>
+	<h1> 고객센터 - 공지사항_상세 </h1>
 
 
 </body>

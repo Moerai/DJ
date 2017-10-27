@@ -3,25 +3,93 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-	<header>	
-		<h1>로고</h1>
-		<ul>
-			<li>
-				<a href="/cms/member/list">회원관리</a>
-			</li>
-			<li>
-				<a href="/cms/voc/list">고객센터 관리</a>
-				<a href="/cms/voc/list1">고객센터 관리</a>
-			</li>
-			<li>
-				<a href="/cms/market/list">중고장터 관리</a>
-				<a href="/cms/market/list1">중고장터 관리</a>
-			</li>
-			<li>
-				<a href="/cms/board/list">게시판 관리</a>
-			</li>
-			<li>
-				<a href="/cms/ad/list">광고 관리</a>
-			</li>
-		</ul>
-	</header>
+<head>
+  <meta charset="utf-8"/>
+  <title>대중 관리자 홈페이지</title>
+  <style>
+
+  a{
+      text-decoration: none;
+      color:black;
+    }
+
+  ul li{
+         display: inline;
+       }
+
+  #logo{
+    height: 60px;
+    width: 120px;
+    float:left;
+    background-color: blue;
+  }
+  #select{
+    width: 700px;
+    height: 60px;
+    background-color: red;
+    float:left;
+  }
+  #header{
+       height: 60px;
+       background-color: #D5C6AC;
+       }
+  #log{
+      width: 130px; height: 60px;
+      float:right;
+      background-color: green;
+      }
+  #sidebar{
+      width:120px;
+      height:600px;
+      float:left;
+      background-color: orange;
+  }
+  #content{
+      width:auto;
+      height:600px;
+      background-color: purple;
+  }
+  #footer{
+    width:auto;
+    height:60px;
+    background-color: gold;
+  }
+  #select ul li{
+         margin:0 15px;
+         padding: 10px;
+       }
+  #log ul li{
+    margin:0 25px;
+    padding: 15px;
+  }
+  </style>
+</head>
+<body>
+  <div id="frame">
+    <div id="header">
+      <div id="logo">
+        <a href="Backindex.jsp"><img src=""></a>
+      </div>
+      <div id="select">
+        <ul style="padding:0">
+          <li><a href="../member/memberList">회원관리</a></li>
+          <li><a href="../market/productList">중고장터관리</a></li>
+          <li><a href="../board/boardList">게시판관리</a></li>
+          <li><a href="../ad/manageAD">광고관리</a></li>
+          <li><a href="../voc/notice">고객센터관리</a></li>
+        </ul>
+      </div>
+      <div id="log">
+        <ul style="padding:0;">
+          <li><a href="">logout</a></li>
+        </ul>
+      </div>
+    </div>
+  <div id="sidebar">
+  </div>
+  <div id="content">
+  </div>
+  <div id="footer">
+  </div>
+ </div>
+</body>
