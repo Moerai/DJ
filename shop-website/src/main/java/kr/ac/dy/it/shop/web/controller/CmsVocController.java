@@ -19,12 +19,12 @@ public class CmsVocController {
     @Autowired
     MemberService memberService;
 
-    @RequestMapping("/cms/voc/list")
+    @RequestMapping("/cms/ad/manageAD")
     public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-    	
+  
 
-        return "cms/voc/list";
+        return "cms/ad/manageAD";
     }
 
 }

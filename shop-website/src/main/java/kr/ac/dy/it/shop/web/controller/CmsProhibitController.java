@@ -14,17 +14,17 @@ import java.util.List;
 
 @Slf4j
 @Controller
-public class CmsMarketController {
+public class CmsProhibitController {
 
     @Autowired
     MemberService memberService;
 
-    @RequestMapping("/cms/market/productList")
+    @RequestMapping("/cms/market/productProhibit")
     public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
 
     	
 
-        return "cms/market/productList";
+        return "cms/market/productProhibit";
     }
 
 }

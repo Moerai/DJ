@@ -14,6 +14,10 @@
 
 <h1>쇼핑몰 - 회원 리스트</h1>
 
+		<p>
+		${userName}
+		</p>
+
 <div>
 	<c:forEach var="member" items="${members}">
 		<p>

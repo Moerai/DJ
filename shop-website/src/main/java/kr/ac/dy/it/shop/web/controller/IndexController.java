@@ -23,7 +23,10 @@ public class IndexController {
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
 
         List<Member> memberList = memberService.gets();
-
+        
+        String name ="박성수";
+        
+        model.addAttribute("userName",name);
 
         model.addAttribute("members", memberList);
 
@@ -33,7 +36,16 @@ public class IndexController {
 
 
 
-        return "index";
+        return "index"; //물리적 주소값을 반환해준다.
     }
+    
+    @RequestMapping("/member/login")
+    String memberLogin() {
+    	
+    	
+    	
+    	return"member/login";
+    }
+    
 
 }
