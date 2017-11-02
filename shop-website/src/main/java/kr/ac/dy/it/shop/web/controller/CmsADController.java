@@ -19,12 +19,12 @@ public class CmsADController {
     @Autowired
     MemberService memberService;
 
-    /*@RequestMapping("/cms/member/memberList")
+    @RequestMapping("/cms/ad/manageAD")
     public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
 
     	
 
-        return "cms/member/memberList";
-    }*/
+        return "cms/ad/manageAD";
+    }
 
 }
