@@ -31,8 +31,8 @@ adption {
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
 
-	<h1 align="center">회원관리 - 회원관리</h1>
-	<table align="center">
+	<h1 align="center"> <br><br><br> 회원관리 - 회원관리<br><br></h1>
+	<table align="center"> 
 
 		<tr>
 			<th>회원번호</th>
