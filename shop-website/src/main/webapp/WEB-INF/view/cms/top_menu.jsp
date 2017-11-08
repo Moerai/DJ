@@ -38,7 +38,7 @@
       float:right;
       background-color: green;
       }
-  #sidebar{
+  /* #sidebar{
       width:120px;
       height:600px;
       float:left;
@@ -53,7 +53,7 @@
     width:auto;
     height:60px;
     background-color: gold;
-  }
+  } */
   #select ul li{
          margin:0 15px;
          padding: 10px;
