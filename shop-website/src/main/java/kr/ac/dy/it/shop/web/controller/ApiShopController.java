@@ -19,9 +19,10 @@ public class ApiShopController {
 
 	@RequestMapping("/api/member/myitem")//내상품보기
 	@ResponseBody
-	public String myitem(Model model, HttpServletRequest request, HttpServletResponse response,
+	public ResponseData<Object> myitem(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
-		return "내상품보기" ;
+
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 	@RequestMapping("/api/member/select")//찜목록
@@ -29,7 +30,7 @@ public class ApiShopController {
 	public ResponseData<Object> select(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 	@RequestMapping("/api/member/man")//남성의류
@@ -37,7 +38,7 @@ public class ApiShopController {
 	public ResponseData<Object> man(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 	@RequestMapping("/api/member/woman")//여성의류
@@ -45,7 +46,7 @@ public class ApiShopController {
 	public ResponseData<Object> woman(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 	@RequestMapping("/api/member/bag")//가방
@@ -53,7 +54,7 @@ public class ApiShopController {
 	public ResponseData<Object> bag(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 	@RequestMapping("/api/member/watch")//시계
@@ -61,7 +62,7 @@ public class ApiShopController {
 	public ResponseData<Object> watch(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 	@RequestMapping("/api/member/accessory")//악세사리
@@ -69,7 +70,7 @@ public class ApiShopController {
 	public ResponseData<Object> accessory(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 
@@ -78,7 +79,7 @@ public class ApiShopController {
 	public ResponseData<Object> cosmetics(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 
@@ -87,7 +88,7 @@ public class ApiShopController {
 	public ResponseData<Object> perfume(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 		
 	}
@@ -97,7 +98,7 @@ public class ApiShopController {
 	public ResponseData<Object> phone(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 
@@ -106,7 +107,7 @@ public class ApiShopController {
 	public ResponseData<Object> elec(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 
@@ -115,7 +116,7 @@ public class ApiShopController {
 	public ResponseData<Object> book(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 
@@ -124,7 +125,7 @@ public class ApiShopController {
 	public ResponseData<Object> etc(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 
@@ -133,7 +134,7 @@ public class ApiShopController {
 	public ResponseData<Object> showall(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 
-		return null ;
+		return new ResponseData<Object>(false, "에러임...");
 
 	}
 }
