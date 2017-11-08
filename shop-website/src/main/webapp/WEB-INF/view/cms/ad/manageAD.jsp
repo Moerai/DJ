@@ -13,7 +13,9 @@
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 
 	<h1> 광고관리 </h1>
+	
+	<center><img src="/images/dora.jpg" Width="700px" height="700px" align="center"></center>
 
-
+ 
 </body>
-</html>
+</html> 
