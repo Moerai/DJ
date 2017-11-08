@@ -29,9 +29,9 @@ font-weight:bold;}
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 
-	<h1> 중고장터 관리 - 금지 언어 / 상품 </h1>
+	<h1 align="center"> 중고장터 관리 - 금지 언어 / 상품 </h1>
 
-<table >
+<table align="center" >
 
   
   			<colgroup bgroi>
