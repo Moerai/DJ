@@ -19,9 +19,9 @@ public class ApiShopController {
 
 	@RequestMapping("/api/member/myitem")//내상품보기
 	@ResponseBody
-	public ResponseData<Object> myitem(Model model, HttpServletRequest request, HttpServletResponse response,
+	public String myitem(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
-		return null ;
+		return "내상품보기" ;
 
 	}
 	@RequestMapping("/api/member/select")//찜목록
