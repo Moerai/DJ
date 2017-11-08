@@ -76,7 +76,7 @@
           <li><a href="../market/productList">중고장터관리</a></li>
           <li><a href="../board/boardList">게시판관리</a></li>
           <li><a href="../ad/manageAD">광고관리</a></li>
-          <li><a href="../voc/notice">고객센터관리</a></li>
+          <li><a href="../voc/notice">공지사항</a></li>
         </ul>
       </div>
       <div id="log">
