@@ -34,5 +34,23 @@ public class ApiMemberController {
 		}
 
 	}
+	
+	
+	
 
+	@RequestMapping("/api/member/register")
+	@ResponseBody
+	public ResponseData<Object> register(Model model, HttpServletRequest request, HttpServletResponse response,
+			Member parameter) {
+		
+		parameter.setUserName(parameter.getUserName() + "바보");
+		
+		
+		return new ResponseData<Object>(true, parameter);
+		
+
+	}
+	
+	
+	
 }
