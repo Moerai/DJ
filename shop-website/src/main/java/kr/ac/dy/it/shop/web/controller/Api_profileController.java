@@ -28,19 +28,43 @@ public class Api_profileController {
 			HttpServletResponse response,Member parameter) {
 			
 		return null;
-
 	}
-	
-	
+		
 	// 회원정보수정
 	@RequestMapping("/api/member/memberUpdata")
 	@ResponseBody
 	public ResponseData<Object> memberUpdata(Model model, HttpServletRequest request, 
+			HttpServletResponse response,Member parameter) {			
+		return null;
+	}
+	
+	//나의 등급	
+	@RequestMapping("/api/member/member_class")
+	@ResponseBody
+	public ResponseData<Object> member_class(Model model, HttpServletRequest request, 
 			HttpServletResponse response,Member parameter) {
 			
 		return null;
-
 	}
+	
+	//프로필 이미지 변경
+	@RequestMapping("/api/member/member_class")
+	@ResponseBody
+	public ResponseData<Object> profile_image_change(Model model, HttpServletRequest request, 
+			HttpServletResponse response,Member parameter) {
+			
+		return null;
+	}
+	// 커뮤니티
+	@RequestMapping("/api/member/community")
+	@ResponseBody
+	public ResponseData<Object> community(Model model, HttpServletRequest request, 
+			HttpServletResponse response,Member parameter) {
+			
+		return null;
+	}
+
+	
 	
 	
 	
