@@ -12,7 +12,7 @@
 </head>
 
   <body>
-  <form action = "loginProcess.jsp" method = "get"
+  <form action = "loginProcess.jsp" method = "get">
 	<div class="login">
 		<div class="login-screen">
 			<div class="app-title">
@@ -35,5 +35,6 @@
 			</div>
 		</div>
 	</div>
+	</form>
 	</body>
 </html>
