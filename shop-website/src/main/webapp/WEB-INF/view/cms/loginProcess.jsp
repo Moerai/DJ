@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-   <% String id = request.getParameter("id");
-   	  String pwd = request.getParameter("pwd");
-   %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	<%@ page import ="cmsdata.UserDAO"%>
+	<%@ page import ="java.io.PrintWriter"%>
+<%@ page import="cmsdata.User" %>
+<jsp:useBean id="user" class="cmsdata.User" scope="page"/>
+	<jsp:setProperty name="user" property="userID"/>
+	<jsp:setProperty name="user" property="userPassword"/>
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Insert title here</title>
+<title>로그인 프로세스 페이지</title>
 </head>
 <body>
-	<% if(id.equals("dong")){
-		
-	}
-	response.sendRedirect("");
-		%>
+	<%
+		UserDAO userDAO = new UserDAO();
+		int result = userDAO.longin(user.getUserID(), user.getUserPassword());
+		if(result==1){
+		    PrintWriter script = response.getWriter();
+		    script.println("<script>");
+		    script.println("location.href='member.memberList.jsp'");
+		    script.println("history.block()");
+		    script.println("</script>");
+		}else if(result==2){
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('비밀번호가 틀립니다.')");
+			script.println("history.block()");
+			script.println("</script>");
+		}else if(result==-1){
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('존재하지 않는 아이디입니다.')");
+			script.println("history.block()");
+			script.println("</script>");
+		}else if(result==-2){
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('데이터배이스 오류가 발생했습니다.')");
+			script.println("history.block()");
+			script.println("</script>");
+		}
+	%>
+
 </body>
 </html>

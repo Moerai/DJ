@@ -30,7 +30,7 @@ adption {
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
-
+	<jsp:include page="/WEB-INF/view/cms/member/member_sidebar.jsp" ></jsp:include>
 	<h1 align="center"> <br><br><br> 회원관리 - 회원관리<br><br></h1>
 	<table align="center"> 
 

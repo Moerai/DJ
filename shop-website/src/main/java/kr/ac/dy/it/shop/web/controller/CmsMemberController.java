@@ -18,11 +18,15 @@ public class CmsMemberController {
 
     @Autowired
     MemberService memberService;
-
-    @RequestMapping("/cms/member/memberList")
+    @RequestMapping("/cms/login")
     public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-    	
+        return "cms/login";
+    }
+
+    @RequestMapping("/cms/member/memberList")
+    public String member(Model model, HttpServletRequest request, HttpServletResponse response) {
+
 
         return "cms/member/memberList";
     }

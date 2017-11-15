@@ -1,0 +1,38 @@
+a{
+    text-decoration: none;
+    color:black;
+}
+
+ul li{
+    display: inline;
+}
+
+#logo{
+    height: 60px;
+    width: 120px;
+    float:left;
+    background-color: blue;
+}
+#select{
+    width: 700px;
+    height: 60px;
+    background-color: red;
+    float:left;
+}
+#header{
+    height: 60px;
+    background-color: #D5C6AC;
+}
+#log{
+    width: 130px; height: 60px;
+    float:right;
+    background-color: green;
+}
+#select ul li{
+    margin:0 15px;
+    padding: 10px;
+}
+#log ul li{
+    margin:0 25px;
+    padding: 15px;
+}
