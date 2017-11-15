@@ -21,6 +21,10 @@ th, td {
 	padding: 5px;
 }
 
+th {
+background:#D5D5D5;
+}
+
 adption {
 	font-size: 20px;
 	margin: 10px;
@@ -30,14 +34,12 @@ adption {
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
-	<jsp:include page="/WEB-INF/view/cms/member/member_sidebar.jsp" ></jsp:include>
-	<h1 align="center"> <br><br><br> 회원관리 - 회원관리<br><br></h1>
+	<h1 align="center"> <br> 회원관리 - 회원관리<br><br></h1>
 	<table align="center"> 
 
 		<tr>
-			<th>회원번호</th>
 			<th>회원이름</th>
-			<th>회원종류</th>
+			<th>회원상태</th>
 			<th>아이디</th>
 			<th>비밀번호</th>
 			<th>닉네임</th>
@@ -45,12 +47,10 @@ adption {
 			<th>휴대폰</th>
 			<th>주소</th>
 			<th>학번</th>
-			<th>회원등급</th>
-			<th>등급순위</th>
 		</tr>
 
 		<tr>
-			<td>1</td>
+
 			<td>신현성</td>
 			<td>탈퇴</td>
 			<td>asd123</td>
@@ -60,14 +60,10 @@ adption {
 			<td>01000000000</td>
 			<td>구일</td>
 			<td>20170000</td>
-			<td>브론즈</td>
-			<td>800</td>
 		</tr>
 
 		<tr>
-			<td>2</td>
-			<td>.</td>
-			<td>.</td>
+
 			<td>.</td>
 			<td>.</td>
 			<td>.</td>
@@ -80,24 +76,6 @@ adption {
 		</tr>
 
 		<tr>
-			<td>3</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-		</tr>
-
-		<tr>
-			<td>4</td>
-			<td>.</td>
-			<td>.</td>
 			<td>.</td>
 			<td>.</td>
 			<td>.</td>
@@ -110,9 +88,6 @@ adption {
 		</tr>
 
 		<tr>
-			<td>5</td>
-			<td>.</td>
-			<td>.</td>
 			<td>.</td>
 			<td>.</td>
 			<td>.</td>
@@ -125,9 +100,18 @@ adption {
 		</tr>
 
 		<tr>
-			<td>6</td>
 			<td>.</td>
 			<td>.</td>
+			<td>.</td>
+			<td>.</td>
+			<td>.</td>
+			<td>.</td>
+			<td>.</td>
+			<td>.</td>
+			<td>.</td>
+		</tr>
+
+		<tr>
 			<td>.</td>
 			<td>.</td>
 			<td>.</td>
