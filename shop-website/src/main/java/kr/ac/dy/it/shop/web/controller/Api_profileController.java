@@ -48,7 +48,7 @@ public class Api_profileController {
 	}
 	
 	//프로필 이미지 변경
-	@RequestMapping("/api/member/member_class")
+	@RequestMapping("/api/member/profile_image_change")
 	@ResponseBody
 	public ResponseData<Object> profile_image_change(Model model, HttpServletRequest request, 
 			HttpServletResponse response,Member parameter) {
@@ -63,6 +63,43 @@ public class Api_profileController {
 			
 		return null;
 	}
+	
+	//알림설정
+	@RequestMapping("/api/member/Alarm_Setting")
+	@ResponseBody
+	public ResponseData<Object> Alarm_Setting(Model model, HttpServletRequest request, 
+			HttpServletResponse response,Member parameter) {
+			
+		return null;
+	}
+	// 쪽지설정
+	@RequestMapping("/api/member/Message_Setting")
+	@ResponseBody
+	public ResponseData<Object> Message_Setting(Model model, HttpServletRequest request, 
+			HttpServletResponse response,Member parameter) {
+			
+		return null;
+	}
+	
+	// 암호잠금
+	
+	@RequestMapping("/api/member/Password_Lock")
+	@ResponseBody
+	public ResponseData<Object> Password_Lock(Model model, HttpServletRequest request, 
+			HttpServletResponse response,Member parameter) {
+			
+		return null;
+	}
+	
+	//공지사항
+	@RequestMapping("/api/member/Notice")
+	@ResponseBody
+	public ResponseData<Object> Notice(Model model, HttpServletRequest request, 
+			HttpServletResponse response,Member parameter) {
+			
+		return null;
+	}
+	//문의하기
 
 	
 	
