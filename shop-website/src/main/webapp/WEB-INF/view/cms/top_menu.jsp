@@ -18,75 +18,81 @@ ul li {
 }
 
 #logo {
-	height: 100px;
-	width: 150px;
-	float: left;
+	height: 50px;
+	width: 50px;
+	/*float: left;*/
 	background-color: blue;
 }
 
 #select {
-	width: 1700px;
-	height: 100px;
-	/* background-color: red; */
-	float: left;
+	width: 100%;
+	height: 150px;
+	/*float: left;*/
 }
- 
-#log {
+
+/* #log {
+	width: 50%;
+	height: 50%;
+	/* float: right; 
+	background-color: green;
+}*/
+#sidebar {
 	width: 200px;
-	height: 60px;
-	float: right;
-	/*background-color: green;*/
+	height: 600px;
+	float: left;
+	background-color: #E8FFFF;
 }
-/* #sidebar{
-      width:120px;
-      height:600px;
-      float:left;
-      background-color: orange;
-  }
-  #content{
+/* #content{
       width:auto;
-      height:600px;
+      height:600px; 
       background-color: purple;
-  }
+  } 
   #footer{
-    width:auto;
+    width:auto; 
     height:60px;
     background-color: gold;
   } */
 #select ul li {
-	line-height: 100px; 
-	margin : 0 15px;
-	padding: 10px;
+	line-height: 50px;
 	margin: 0 15px;
-} 
+	padding: 10px;
+}
 
-#log ul li {
+/* #log ul li {
 	margin: 0 25px;
 	padding: 15px;
-}
+} */
 </style>
 </head>
 <body>
 	<div id="frame">
-		<div id="logo">
-			<a href="Backindex.jsp"><img src=""></a>
-		</div>
 		<div id="select">
+			<a href="Backindex.jsp"><img src=""></a>
 			<ul style="padding: 0">
-				<li><a href="../member/memberList">회원리스트</a></li>
-				<li><a href="../market/productList">중고장터/상품리스트</a></li>
-				<li><a href="../market/productProhibit">중고장터/금지언어</a></li>
-				<li><a href="../board/boardList">게시판관리/게시판리스트</a></li>
-				<li><a href="../board/boardRegister">게시판관리/게시판등록</a></li>
-				<li><a href="../ad/manageAD">광고관리</a></li>
-				<li><a href="../voc/notice">공지사항</a></li>
+				<li><img src="/images/logo.png" Width="170px" height="100px"
+					align="center"></li>
+				<li><a href="../member/memberList">회원리스트&nbsp;&nbsp;</a></li>
+				<li><a href="../market/productList">중고장터/상품리스트&nbsp;&nbsp;</a></li>
+				<li><a href="../market/productProhibit">중고장터/금지언어&nbsp;&nbsp;</a></li>
+				<li><a href="../board/boardList">게시판관리/게시판리스트&nbsp;&nbsp;</a></li>
+				<li><a href="../board/boardRegister">게시판관리/게시판등록&nbsp;&nbsp;</a></li>
+				<li><a href="../ad/manageAD">광고관리&nbsp;&nbsp;</a></li>
+				<li><a href="../voc/notice">공지사항&nbsp;&nbsp;</a></li>
 				<li><a href="../voc/noticeClassify">공지사항/상세</a></li>
-				<div id="log">
-					<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logout</a></li>
-				</div>
+				<li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;로그아웃</a>
 			</ul>
 		</div>
-		<div id="sidebar"></div>
+		<div id="sidebar" align = "center"> 
+			<li><a href="../member/memberList"><font color="#000000"><br><br><br><br>회원리스트</font><br><br><br></font></a></li>
+			<li><a href="../market/productList"><font color="#000000">중고장터/상품리스트</font><br><br><br></a></li>
+			<li><a href="../market/productProhibit"><font color="#000000">중고장터/금지언어</font><br><br><br></a></li>
+			<li><a href="../board/boardList"><font color="#000000">게시판관리/게시판리스트</font><br><br><br></a></li>
+			<li><a href="../board/boardRegister"><font color="#000000">게시판관리/게시판등록</font><br><br><br></a></li>
+			<li><a href="../ad/manageAD"><font color="#000000">광고관리</font><br><br><br></a></li>
+			<li><a href="../voc/notice"><font color="#000000">공지사항</font><br><br><br></a></li>
+			<li><a href="../voc/noticeClassify"><font color="#000000">공지사항/상세</font>
+			</a></li>
+		</div>  
 		<div id="content"></div>
 		<div id="footer"></div>
 	</div>
