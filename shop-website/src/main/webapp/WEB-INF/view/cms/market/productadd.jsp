@@ -17,7 +17,7 @@
 
     <tr>
         <td>상품분류</td>
-        <td width="300" height="20" </td>
+        <td width="300" height="20"> </td>
     </tr>
     <tr>
         <td >상품명</td>
