@@ -12,7 +12,86 @@
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 
-	<h1> 중고장터 관리 - 상품리스트 </h1>
+	<div>
+
+선택분류 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+  <select align="center">
+    <option value="">선택종류 &nbsp;&nbsp;&nbsp;</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+</select>
+
+</div>
+<br>
+
+<div style="backgroun-color:pink;">
+  검색키워드 &nbsp;&nbsp;
+  <select align="center">
+    <option value="상품명">상품명</option>
+    <option value="상품등록자">상품등록자</option>
+    <option value="상품번호">상품번호</option>
+   
+   </div>
+</select>
+<br><br><br><br>
+
+<table border="1" width="600" height=292 >
+
+
+<tr align="center">
+<td>no.</td>
+<td>상품명</td>
+<td>사진</td>
+<td>등록일</td>
+<td>판매가격</td>
+<td>등록자</td>
+</tr>
+<tr align="center">
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr align="center">
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr align="center">
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr align="center">
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr align="center">
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+</table>
 
 </body>
 </html>
