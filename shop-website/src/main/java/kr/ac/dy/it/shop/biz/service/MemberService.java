@@ -22,6 +22,16 @@ public class MemberService {
 
         return members;
     }
-
+    
+    public Member getMember(Member param) {
+    	Member member = null;
+    	member = memberDao.selectUser(param);
+    	
+    	if(member != null) {
+    		return member;
+    	} else {
+    		return new Member();
+    	}
+    }
 }
 
