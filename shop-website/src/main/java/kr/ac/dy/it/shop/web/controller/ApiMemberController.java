@@ -5,13 +5,17 @@ import kr.ac.dy.it.shop.biz.model.ResponseData;
 import kr.ac.dy.it.shop.biz.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.solr.core.RequestMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.util.List;
 
 @Slf4j
@@ -22,18 +26,10 @@ public class ApiMemberController {
 	MemberService memberService;
 
 	@RequestMapping("/api/member/login")
-	@ResponseBody
-	public ResponseData<Object> index(Model model, HttpServletRequest request, HttpServletResponse response,
-			Member parameter) {
-
-		if (parameter.getUserId() != null && parameter.getUserId().equals("test") && parameter.getPassword() != null
-				&& parameter.getPassword().equals("1234")) {
-			return new ResponseData<Object>();
-		} else {
-			return new ResponseData<Object>(false, " 회원정보가 정확하지 않습니다. ");
-		}
-
-	}
+	public @ResponseBody Member apiLogin(Member parameter, HttpSession sesstion) {
+	        Member member = memberService.getMember(parameter);
+	        return member;
+	    }
 	
 	
 	
