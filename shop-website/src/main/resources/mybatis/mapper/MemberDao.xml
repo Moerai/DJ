@@ -25,5 +25,10 @@
         SELECT *
         FROM MEMBER
     </select>
-
+	
+	<select id="selectUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member" resultType="kr.ac.dy.it.shop.biz.dto.Member">
+		SELECT *
+		FROM MEMBER
+		WHERE USER_ID = #{userId} AND PASSWORD = #{password}
+	</select>
 </mapper>
