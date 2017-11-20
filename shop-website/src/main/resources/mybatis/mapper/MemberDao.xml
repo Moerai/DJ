@@ -34,7 +34,7 @@
 	
 	<insert id="insertUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member">
 		INSERT INTO MEMBER(USER_ID, USER_NAME, PASSWORD)
-		VALUES (#{userId}, #{userName}, #{password})
+		VALUES (#{userId}, #{userName}, #{password})d
 	
 	</insert>
 </mapper>
