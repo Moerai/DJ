@@ -31,4 +31,10 @@
 		FROM MEMBER
 		WHERE USER_ID = #{userId} AND PASSWORD = #{password}
 	</select>
+	
+	<insert id="insertUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member">
+		INSERT INTO MEMBER(USER_ID, USER_NAME, PASSWORD)
+		VALUES (#{userId}, #{userName}, #{password})
+	
+	</insert>
 </mapper>
