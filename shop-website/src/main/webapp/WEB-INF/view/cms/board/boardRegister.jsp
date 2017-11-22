@@ -26,7 +26,7 @@ font-weight:bold;}
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
-
+	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar.jsp"></jsp:include>
 	<h1 align="center"> 게시판관리 - 게시판등록 </h1>
 	<TABLE align="center">
   <COLGROUP>

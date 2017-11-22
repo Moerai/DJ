@@ -16,14 +16,15 @@
         // 현재 로그인된 아이디가 없다면 (= session에 저장된 id가 없다면)
         if(session.getAttribute("id") == null) {
             %>
+    <div class="login">
             <h1> 로그인 페이지 </h1> 
-            <br /> <form action="LOGIN_CHECK.jsp" method="post">
-            <br />
-            <br /> <input name="input_id" type="text">
-            <br />
-            <br /> <input name="input_pw" type="password"> <button> 로그인 </button>
-            <br /> </form>
-            <br /> <button onClick="location.href='JOIN.jsp'"> 회원가입 </button>
+            <form action="LOGIN_CHECK.jsp" method="post">
+
+            <input name="input_id" type="text">
+
+            <input name="input_pw" type="password"> <button> 로그인 </button>
+            </form>
+            <button onClick="location.href='JOIN.jsp'"> 회원가입 </button>
             <%
         } 
         // 현재 로그인된 아이디가 있다면 (= session에 저장된 id가 있다면)
@@ -40,7 +41,7 @@
             <%
         }
     %>
-    
+    </div>
  
 </body>
 </html>

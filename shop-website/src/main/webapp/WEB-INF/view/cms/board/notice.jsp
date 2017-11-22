@@ -26,6 +26,7 @@ background:#D5D5D5;
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
+	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar.jsp"></jsp:include>
 
 	<h1 align="center"> <br><br><br>고객센터 - 공지사항 <br><br></h1>
 
@@ -78,6 +79,6 @@ background:#D5D5D5;
 <td>.</td>
 <td>.</td>
 </tr>
-
+</table>
 </body>
 </html>

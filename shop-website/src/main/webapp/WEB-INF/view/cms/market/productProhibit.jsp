@@ -28,8 +28,9 @@ font-weight:bold;}
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
+    <jsp:include page="/WEB-INF/view/cms/market/market_sidebar.jsp" ></jsp:include>
 
-	<h1 align="center"> 중고장터 관리 - 금지 언어 / 상품 </h1>
+    <h1 align="center"> 중고장터 관리 - 금지 언어 / 상품 </h1>
 
 <table align="center" >
 
@@ -40,12 +41,11 @@ font-weight:bold;}
 				<col width="30%" />
 
 			</colgroup>
-			<thead>
 			<tr>
 				<th scope="col">음란어</th>
 				<th scope="col">비속어</th>
 				<th scope="col">판매불가 상품</th>
-
+            </tr>
 	
   
 

@@ -33,8 +33,8 @@
 <body>
     <div id="sidebar">
         <ul>
-            <li><h1>회원관리</h1></li>
-            <li><a href="../member/memberList">-회원관리</a></li>
+            <li><h1>광고관리</h1></li>
+            <li><a href="../ad/manageAD">-광고관리</a></li>
         </ul>
     </div>
 </body>

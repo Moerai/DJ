@@ -11,7 +11,7 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
-
+	<jsp:include page="/WEB-INF/view/cms/market/market_sidebar.jsp" ></jsp:include>
 	<div>
 
 선택분류 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

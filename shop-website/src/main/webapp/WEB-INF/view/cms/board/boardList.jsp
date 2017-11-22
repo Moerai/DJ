@@ -26,6 +26,7 @@ background:#D5D5D5;
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
+	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar.jsp"></jsp:include>
 
 	<h1 aling="center"><br><br><br> 게시판관리 - 게시판리스트 <br><br></h1>
 <table>

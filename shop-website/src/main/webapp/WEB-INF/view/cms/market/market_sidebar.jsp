@@ -33,8 +33,9 @@
 <body>
     <div id="sidebar">
         <ul>
-            <li><h1>회원관리</h1></li>
-            <li><a href="../member/memberList">-회원관리</a></li>
+            <li><h1>장터관리</h1></li>
+            <li><a href="../market/productList">-장터관리</a></li>
+            <li><a href="../market/productProhibit">-금지어관리</a></li>
         </ul>
     </div>
 </body>
