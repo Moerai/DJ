@@ -13,8 +13,10 @@
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 	<jsp:include page="/WEB-INF/view/cms/market/market_sidebar.jsp" ></jsp:include>
 	<div>
+	
+	<h1 align = "center"> 중고장터 관리 </h1>
 
-선택분류 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<p align = "center">선택분류 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
   <select align="center">
@@ -23,11 +25,12 @@
     <option value="">2</option>
     <option value="">3</option>
 </select>
-
+</p>
 </div>
 <br>
 
 <div style="backgroun-color:pink;">
+<p align = "center">
   검색키워드 &nbsp;&nbsp;
   <select align="center">
     <option value="상품명">상품명</option>
@@ -36,9 +39,10 @@
    
    </div>
 </select>
+</p>
 <br><br><br><br>
 
-<table border="1" width="600" height=292 >
+<table border="1" width="600" height=292 align = "center" >
 
 
 <tr align="center">
