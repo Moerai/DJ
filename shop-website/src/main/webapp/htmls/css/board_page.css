@@ -83,7 +83,7 @@ box-shadow: none;
   text-align: center;
 }
 
-table.type04 {
+table.type00 {
     border-collapse: separate;
     border-spacing: 1px;
     text-align: left;
@@ -93,14 +93,14 @@ table.type04 {
     margin-right: auto;
     text-align: center;
 }
-table.type04 th {
+table.type00 th {
     width: 150px;
     padding: 10px;
     font-weight: bold;
     vertical-align: top;
     border-bottom: 1px solid #ccc;
 }
-table.type04 td {
+table.type00 td {
     width: 350px;
     padding: 10px;
     vertical-align: top;
