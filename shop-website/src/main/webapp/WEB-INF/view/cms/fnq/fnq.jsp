@@ -27,39 +27,74 @@ background:#D5D5D5;
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 
-	<h1 align="center"> <br><br><br> FnQ 등록 <br><br></h1>
+	<h1 align="center"> <br><br><br> FnQ  <br><br></h1>
 
-<TABLE align="center" >
-	<tr>
-	<th> 작성자 </th>
-	<td> </td>
-	<th> 휴대전화 </th>
-	<td> </td>
-	</tr>
+<table align = "center">
+<tr>
+<th> 검색키워드 </th>
+<td>
+<select name="Keyward">
+    <option value="">Dropdown</option>
+    <option value="">Dropdown</option>
+    <option value="">Dropdown</option>
+    <option value="">Dropdown</option>
+</select></td>
+</tr>
+<tr><td></td></tr>
+<tr>
+<th> 등록일 </th>
+  <td><textarea cols="10" placeholder=" " name="content"></textarea></td>
+  </tr>
+  </table>
+  <br><br><br>
+  <table border = "1" align = "center">
+  <tr>
+  <th>No.</th>
+  <th>제목</th>
+  <th>등록일</th>
+  <th>작성자</th>
+  <th>상태</th>
+  </tr>
 
-	<tr>
-	<th> 카테고리 </th>
-	<td > </td>
-	<th>  </th>
-	<td > </td>
-	</tr>
+  <tr>
+  <td> 1 </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  </tr>
 
-	<tr>
-	<th> 제목 </th>
-	<td colspan = 3> </td>
-	</tr>
+  <tr>
+  <td> 2 </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  </tr>
 
-	<tr>
-	<th> 내용 </th>
-	<td colspan = 3> </td>
-	</tr>
+  <tr>
+  <td>  </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  </tr>
 
-	<tr>
-	<th> 첨부파일 </th>
-	<td colspan = 3> </td>
-	</tr>
+  <tr>
+  <td>  </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  </tr>
 
- </TABLE>
+  <tr>
+  <td>  </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  <td> </td>
+  </tr>
 
-</body>
+ </body>
 </html>
