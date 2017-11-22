@@ -28,7 +28,7 @@ background:#D5D5D5;
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
 	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar.jsp"></jsp:include>
 
-	<h1 aling="center"><br><br><br> FAQ <br><br></h1>
+	<h1 align="center">FAQ</h1>
 <table align = "center">
 <tr>
 <th> 검색키워드 </th>
