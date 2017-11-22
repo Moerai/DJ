@@ -5,7 +5,6 @@ import kr.ac.dy.it.shop.biz.model.ResponseData;
 import kr.ac.dy.it.shop.biz.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.solr.core.RequestMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
