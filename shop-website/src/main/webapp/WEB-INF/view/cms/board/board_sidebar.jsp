@@ -36,8 +36,8 @@
             <li><h1>게시판관리</h1></li>
             <li><a href="../board/boardList">-게시판관리</a></li>
             <li><a href="../board/notice">-공지사항</a></li>
-            <li><a href="../board/qna">-FAQ관리</a></li>
-            <li><a href="../board/faq">-Q&A관리</a></li>
+            <li><a href="../board/faqadd">-FAQ등록</a></li>
+            <li><a href="../board/faq">-FAQ관리</a></li>
         </ul>
     </div>
 </body>
