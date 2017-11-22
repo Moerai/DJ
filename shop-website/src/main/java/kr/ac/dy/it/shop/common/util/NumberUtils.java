@@ -85,7 +85,7 @@ public class NumberUtils {
                 }
             }
 
-            return i < chars.length ? (chars[i] >= 48 && chars[i] <= 57 ? true : (chars[i] != 101 && chars[i] != 69 ? (chars[i] == 46 ? (!hasDecPoint && !hasExp ? foundDigit : false) : (!allowSigns && (chars[i] == 100 || chars[i] == 68 || chars[i] == 102 || chars[i] == 70) ? foundDigit : (chars[i] != 108 && chars[i] != 76 ? false : foundDigit && !hasExp && !hasDecPoint))) : false)) : !allowSigns && foundDigit;
+            return i < chars.length ? (chars[i] >= 48 && chars[i] <= 57 || ((chars[i] != 101 && chars[i] != 69) && (chars[i] == 46 ? ((!hasDecPoint && !hasExp) && foundDigit) : (!allowSigns && (chars[i] == 100 || chars[i] == 68 || chars[i] == 102 || chars[i] == 70) ? foundDigit : ((chars[i] == 108 || chars[i] == 76) && (foundDigit && !hasExp && !hasDecPoint)))))) : !allowSigns && foundDigit;
         }
     }
 

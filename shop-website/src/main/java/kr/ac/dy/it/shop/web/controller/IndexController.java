@@ -39,13 +39,6 @@ public class IndexController {
         return "index"; //물리적 주소값을 반환해준다.
     }
     
-    @RequestMapping("/member/login")
-    String memberLogin() {
-    	
-    	
-    	
-    	return"member/login";
-    }
-    
+
 
 }
