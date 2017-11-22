@@ -36,6 +36,7 @@ adption {
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
 	<jsp:include page="/WEB-INF/view/cms/member/member_sidebar.jsp" ></jsp:include>
 	<h1 align="center"> <br> 회원관리 - 회원관리<br><br></h1>
+	
 	<table align="center"> 
 
 		<tr>
@@ -43,86 +44,27 @@ adption {
 			<th>회원상태</th>
 			<th>아이디</th>
 			<th>비밀번호</th>
+			<th>경험치</th>
 			<th>닉네임</th>
 			<th>이메일</th>
 			<th>휴대폰</th>
 			<th>주소</th>
-			<th>학번</th>
+			<th>생일</th>
 		</tr>
-
-		<tr>
-
-			<td>신현성</td>
-			<td>탈퇴</td>
-			<td>asd123</td>
-			<td>zxc123</td>
-			<td>신현성짱</td>
-			<td>asd@naver.com</td>
-			<td>01000000000</td>
-			<td>구일</td>
-			<td>20170000</td>
-		</tr>
-
-		<tr>
-
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-		</tr>
-
-		<tr>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-		</tr>
-
-		<tr>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-		</tr>
-
-		<tr>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-		</tr>
-
-		<tr>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-			<td>.</td>
-		</tr>
+		<c:forEach var="member" items="${members}">
+			<tr>
+				<td>${member.userName}</td>
+				<td></td>
+				<td>${member.userId }</td>
+				<td>${member.password }</td>
+				<td>${member.exp}</td>
+				<td>${member.nickName }</td>
+				<td>${member.email}</td>
+				<td>${member.phone }</td>
+				<td> </td>
+				<td>${member.birthday }</td>
+			</tr>
+		</c:forEach>
 	</table>
 </body>
 </html>
