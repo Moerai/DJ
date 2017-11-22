@@ -39,7 +39,7 @@ public class CmsLoginController {
 
 
     //회원관리
-    @RequestMapping("/cms/member/member-list")
+    @RequestMapping("/cms/member/memberList")
     public String member(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
     	
