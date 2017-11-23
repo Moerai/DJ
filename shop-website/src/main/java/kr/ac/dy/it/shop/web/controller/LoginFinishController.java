@@ -15,7 +15,7 @@ public class LoginFinishController {
     @Autowired
     MemberService memberService;
     
-    @RequestMapping("/login/finish")
+    @RequestMapping("/login/login_finish")
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "login/login_finish";
