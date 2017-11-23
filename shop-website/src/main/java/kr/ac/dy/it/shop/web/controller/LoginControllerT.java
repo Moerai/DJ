@@ -15,7 +15,7 @@ public class LoginControllerT {
     @Autowired
     MemberService memberService;
     
-    @RequestMapping("/login/")
+    @RequestMapping("/login/loginpage")
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "login/loginpage";
