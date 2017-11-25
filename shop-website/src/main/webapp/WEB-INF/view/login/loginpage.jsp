@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<form action = "logintest" method = "post">
+<form action = "loginchecked" method = "post">
 	<div class="login">
 		<div class="login-screen">
 			<div class="app-title">
