@@ -15,7 +15,7 @@
 </head>
 <body>
     <table border="2" bgcolor="" align="center" class="table">
-        <FORM action = "registerFinish" method = "post">
+        <FORM action = "registerchecked" method = "post" onsubmit="return input_check_func()">
             <tr>
                 <td class="td">닉네임</td>
                 <td>
@@ -25,20 +25,20 @@
             <tr>
                 <td class="td">아이디</td>
                 <td>
-                    <input type="text" name = "register-id"/>
+                    <input type="text" id = "register-id" name = "register-id"/>
                 </td>
             </tr>
             
             <tr>
                 <td class="td">비밀번호</td>
                 <td>
-                    <input type="password" name = "register-pw"/>
+                    <input type="password" id = "register-pw" name = "register-pw"/>
                 </td>
             </tr>
             <tr>
                 <td class="td">비밀번호확인</td>
                 <td>
-                    <input type="password" name = "pw-check"/>
+                    <input type="password" id = "pw-check" name = "pw-check"/>
                 </td>
             </tr>
             <tr>
@@ -87,6 +87,29 @@
             </tr>
     </table>
     </form>
+     <script>
+    // input_check_func는 회원가입에 필요한 3가지 문항을 전부다 채워 넣었는지 check 해준다
+    // 이는 form onsubmit에 의해 발동되며 return 값이 false 일 경우 페이지의 데이터가 action= 좌표로 넘어가지 않게된다
+    function input_check_func() {
+        var id = document.getElementById('register-id').value;
+        var pw = document.getElementById('register-pw').value;
+        var pwcheck = document.getElementById('pw-check').value;
+        
+        if(id == null || pw == null || id == ""   || pw == "") {
+            alert("공백을 사용하실 수 없습니다.");
+            return false;
+        } else {
+            // 모든조건이 충족되면 true를 반환한다 이는 현재 페이지의 정보를 action= 좌표로 넘긴다는것을 의미
+        	  if(pw != pwcheck){
+              	alert("비밀번호가 같지 않습니다.")
+              	return false;
+              }else {
+              	return true;
+              }
+        }
+      
+    }    
+    </script>
 </body>
 
 </html>
