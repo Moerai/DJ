@@ -22,10 +22,10 @@ public class MainController2 {
     @Autowired
     MemberService memberService;
 
-    @RequestMapping("/login/main")
+    @RequestMapping("/login/Main")
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
-        return "login/main";
+        return "login/Main";
     }
 
 }
