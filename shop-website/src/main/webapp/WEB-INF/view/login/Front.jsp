@@ -14,17 +14,17 @@
 	  
 	<div class="main">
 		<div class="main-screen">
-				<button> <img src="../../../../FrontProfile.png" width="80pt" height="60pt"> </button>
+				<button> <img src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/FrontProfile.png" width="80pt" height="60pt"/> </button>
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
-				<img src="FrontLogo.png" width="80" height="60">
+				<img src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/FrontLogo.png" width="80" height="60">
 			<hr border = 10>
 			<div class="img" >
-				<input id="Used" type="image" src="../../../../htmls/중고장터.png">
-				<input id="Comunity" type="image" src="../../../../htmls/커뮤니티.png">
+				<input id="Used" type="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/Front중고장터.png">
+				<input id="Comunity" type="image" src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/Front커뮤니티.png">
 			</div>
 			<br> <br> <br>
 			
