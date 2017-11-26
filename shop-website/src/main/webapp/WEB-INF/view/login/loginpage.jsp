@@ -13,7 +13,7 @@
 	<div class="login">
 		<div class="login-screen">
 			<div class="app-title">
-				<img src="../../../../htmls/Logo.png" width="100" height="80">
+				<img src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/PCLogo.png" width="100" height="80">
 			</div>
 
 			<div class="login-form">
