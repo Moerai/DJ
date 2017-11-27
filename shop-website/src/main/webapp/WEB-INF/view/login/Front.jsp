@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Front</title>
-	  <link rel="stylesheet" href="../../../../htmls/css/Frontstyle.css">
+	  <link rel="stylesheet" href="/css/Frontstyle.css">
 	  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
 
@@ -14,20 +14,19 @@
 	  
 	<div class="main">
 		<div class="main-screen">
-				<button> <img src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/FrontProfile.png" width="80pt" height="60pt"/> </button>
+				<button> <img src="/images/FrontProfile.png" width="80pt" height="60pt"/> </button>
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
 				&nbsp; &nbsp; &nbsp; &nbsp;
-				<img src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/FrontLogo.png" width="80" height="60">
+				<img src="/images/FrontLogo.png" width="80" height="60">
 			<hr border = 10>
 			<div class="img" >
-				<input id="Used" type="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/Front중고장터.png">
-				<input id="Comunity" type="image" src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/Front커뮤니티.png">
+				<input id="Used" type="/images/Front중고장터.png">
+				<input id="Comunity" type="image" src="/images/Front커뮤니티.png">
 			</div>
 			<br> <br> <br>
-			
 		</div>
 	</div>
 </body>

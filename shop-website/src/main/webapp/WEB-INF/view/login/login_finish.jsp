@@ -8,7 +8,7 @@
     <meta name="Author" content="">
     <meta name="Keywords" content="">
     <meta name="Description" content="">
-    <link rel="stylesheet" href="../../../htmls/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 

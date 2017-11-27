@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login Form</title>
-      <link rel="stylesheet" href="../../../../htmls/css/style.css">
+      <link rel="stylesheet" href="/css/style.css">
 	  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
 
@@ -13,7 +13,7 @@
 	<div class="login">
 		<div class="login-screen">
 			<div class="app-title">
-				<img src="file:///D:/DEV_v2/workspace/shop-website/src/main/resources/static/images/PCLogo.png" width="100" height="80">
+				<img src="/images/PCLogo.png" width="100" height="80">
 			</div>
 
 			<div class="login-form">

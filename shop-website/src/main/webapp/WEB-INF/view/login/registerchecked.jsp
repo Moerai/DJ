@@ -12,7 +12,7 @@
 <body>
 	<%
 		// 회원가입에 필요한 값들을 변수에 담아준다
-		String user_name = "";
+		String user_name = request.getParameter("nickname");;
 		String state = "";
 		String user_id = request.getParameter("register-id");
 		String password = request.getParameter("register-pw");
