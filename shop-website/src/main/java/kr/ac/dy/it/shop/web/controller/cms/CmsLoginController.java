@@ -21,13 +21,22 @@ public class CmsLoginController {
     MemberService memberService;
 
     //로그인
-    @RequestMapping(path = "/cms/login", method = RequestMethod.POST)
+    @RequestMapping(path = "/cms/login", method = {RequestMethod.POST, RequestMethod.GET})
     public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
 
         //로그인
 
 
         return "cms/login";
+    }
+
+    @RequestMapping(path = "/cms/test", method = {RequestMethod.POST,RequestMethod.GET})
+    public String test(Model model, HttpServletRequest request, HttpServletResponse response) {
+
+        //로그인
+
+
+        return "cms/test";
     }
 
     //회원가입
@@ -43,7 +52,7 @@ public class CmsLoginController {
     public String member(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
     	
-    	/*List<Member> members = new ArrayList<Member>();
+    	List<Member> members = new ArrayList<Member>();
     	
     	Member member1 = new Member();
     	member1.setUserId("id1");;
@@ -55,14 +64,14 @@ public class CmsLoginController {
     	member2.setUserId("id2");;
     	member2.setUserName("이순신");
     	member2.setPassword("4444");    	
-    	members.add(member2);*/
+    	members.add(member2);
     	
     	
-    	List<Member> members = memberService.gets();
+    	List<Member> members1 = memberService.gets();
     	
     	
     	
-    	model.addAttribute("members", members);
+    	model.addAttribute("members", members1);
     	
     	
     	
