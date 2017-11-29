@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -38,10 +39,9 @@ public class ApiMemberController {
 	public ResponseData<Object> register(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
 		
-		parameter.setUserName(parameter.getUserName() + "바보");
+		boolean result = memberService.addMember(parameter);
 		
-		
-		return new ResponseData<Object>(true, parameter);
+		return new ResponseData<Object>(result, (result ? "회원가입 성공":"회원가입 실패"));
 		
 
 	}
