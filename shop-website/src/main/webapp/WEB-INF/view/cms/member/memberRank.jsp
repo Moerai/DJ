@@ -34,6 +34,7 @@ adption {
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/view/cms/member/member_sidebar.jsp" ></jsp:include>
 	<h1 align="center">
 		<br> 회원관리 - 회원등급<br>
 		<br>
@@ -51,7 +52,7 @@ adption {
 		<tr> 
 			<th>브론즈</th>
 			<td>0 ~ 5점</td>
-			<td>8</td>
+			<td></td>
 			<td>X</td>
 			<td>0%</td>
 		</tr>
@@ -59,7 +60,7 @@ adption {
 		<tr>
 			<th>실버</th>
 			<td>5 ~ 10점</td>
-			<td>15</td>
+			<td></td>
 			<td>X</td>
 			<td>10%</td>
 		</tr>
@@ -67,7 +68,7 @@ adption {
 		<tr>
 			<th>골드</th>
 			<td>10 ~ 15점</td>
-			<td>9</td>
+			<td></td>
 			<td>X</td>
 			<td>20%</td>
 		</tr>
@@ -75,7 +76,7 @@ adption {
 		<tr>
 			<th>다이아</th>
 			<td>15 ~ 20점</td>
-			<td>5</td>
+			<td></td>
 			<td>X</td>
 			<td>30%</td>
 		</tr>
@@ -83,7 +84,7 @@ adption {
 		<tr>
 			<th>마스터</th>
 			<td>20 ~ 25점</td>
-			<td>3</td>
+			<td></td>
 			<td>파워등록 1회 <br> 글씨체 강조 1회 <br> 색상 강조 1회
 			</td>
 			<td>40%</td>

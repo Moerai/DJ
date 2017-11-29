@@ -34,7 +34,10 @@
     <div id="sidebar">
         <ul>
             <li><h1>회원관리</h1></li>
-            <li><a href="../member/memberList">-회원관리</a></li>
+            <li><a href="../member/memberList">-회원 관리</a></li>
+            <li><a href="../member/memberse">-탈퇴 회원</a></li>
+            <li><a href="../member/memberRank">-회원 등급</a></li>
+        
         </ul>
     </div>
 </body>
