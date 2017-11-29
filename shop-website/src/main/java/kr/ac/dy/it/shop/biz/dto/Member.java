@@ -20,6 +20,5 @@ public class Member {
 	String phone;
 	String address;
 	String studentNum;
-	
-	
+
 }
