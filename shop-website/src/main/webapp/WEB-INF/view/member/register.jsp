@@ -79,7 +79,7 @@
 
 		</tr>
 		<script type="text/javascript">
-			function checkPwd() {
+			function checkPwd() { // 비밀번호가 다르면 빨간색 같으면 색 변화 x
 				var password = $('#password').val();
 				var passwordcheck = $('#passwordcheck').val();
 				if (password != passwordcheck) {
@@ -120,8 +120,6 @@
 			<td class="td">주소</td>
 			<td><input type="text" id="addr" />
 		</tr>
-
-
 
 		<tr>
 			<td class="td">학번</td>
