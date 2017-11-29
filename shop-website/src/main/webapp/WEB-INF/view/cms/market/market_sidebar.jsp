@@ -34,8 +34,8 @@
     <div id="sidebar">
         <ul>
             <li><h1>장터관리</h1></li> 
-            <li><a href="../market/productadd">-상품리스트</a></li>
-            <li><a href="../market/productList">-장터관리</a></li>
+            <li><a href="../market/productadd">-상품 등록</a></li>
+            <li><a href="../market/productList">-상품리스트</a></li>
             <li><a href="../market/productProhibit">-금지어관리</a></li>
         </ul>
     </div>

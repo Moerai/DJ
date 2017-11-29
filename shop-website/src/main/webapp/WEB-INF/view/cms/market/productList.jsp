@@ -14,7 +14,7 @@
 	<jsp:include page="/WEB-INF/view/cms/market/market_sidebar.jsp" ></jsp:include>
 	<div>
 	
-	<h1 align = "center"> 중고장터 관리 </h1>
+	<h1 align = "center"> 상품 리스트 </h1>
 
 <p align = "center">선택분류 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
