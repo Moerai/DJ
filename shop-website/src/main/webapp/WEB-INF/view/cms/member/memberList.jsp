@@ -46,11 +46,26 @@ adption {
 			<th>비밀번호</th>
 			<th>경험치</th>
 			<th>닉네임</th>
-			<th>이메일</th>
 			<th>휴대폰</th>
 			<th>주소</th>
-			<th>생일</th>
+			<th>학번</th>
 		</tr>
+<<<<<<< .mine
+		<c:forEach var="member" items="${members}">
+			<tr>
+				<td>${member.userName}</td>
+				<td>${member.state}</td>
+				<td>${member.userId }</td>
+				<td>${member.password }</td>
+				<td>${member.exp}</td>
+				<td>${member.nickName }</td>
+				<td>${member.phone}</td>
+				<td>${member.address}</td>
+				<td>${member.student_num}</td>
+			</tr>
+		</c:forEach>
+=======
+>>>>>>> .r209
 	</table>
 </body>
 </html>
