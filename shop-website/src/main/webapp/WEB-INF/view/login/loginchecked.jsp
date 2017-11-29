@@ -12,9 +12,7 @@
 <title> Login_Check </title>
 </head>
 <body>
- 
-    <h1> 로그인 체크 페이지 </h1>
-    
+
     <%
     try {
         // 드라이버 로딩
@@ -53,7 +51,7 @@
             session.setAttribute("id", user_id); 
             session.setAttribute("pw", user_pw);
             // 첫 페이지로 돌려보낸다
-            response.sendRedirect("Front");    
+            response.sendRedirect("Front");
         } else {
             // DB에 내가적은 정보가 없다면 경고창을 띄워준다
             %> <script> alert("로그인 실패"); history.go(-1); </script> <%            
