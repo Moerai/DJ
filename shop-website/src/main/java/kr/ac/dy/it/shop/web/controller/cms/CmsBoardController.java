@@ -21,8 +21,18 @@ public class CmsBoardController {
 
         return "cms/ad/manageAD";
     }
+    
+    
+    //상품등록
+    @RequestMapping("/cms/market/productadd")
+    public String productadd(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-    //상품관리
+
+
+        return "cms/market/productadd";
+    }
+
+    //상품리스트
     @RequestMapping("/cms/market/productList")
     public String productList(Model model, HttpServletRequest request, HttpServletResponse response) {
 
@@ -60,17 +70,17 @@ public class CmsBoardController {
     }
 
     //공지상세
-    @RequestMapping("/cms/board/noticeClassfy")
+    @RequestMapping("/cms/board/noticeClassify")
     public String classfy(Model model, HttpServletRequest request, HttpServletResponse response) {
 
         return "cms/board/noticeClassify";
     }
 
     //Q&A
-    @RequestMapping("/cms/board/qna")
+    @RequestMapping("/cms/board/faqadd")
     public String qna(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-        return "cms/board/qna";
+        return "cms/board/faqadd";
     }
 
     //FAQ

@@ -76,7 +76,7 @@ public class CmsLoginController {
     public String member(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
     	
-    	List<Member> members = new ArrayList<Member>();
+    	/*List<Member> members = new ArrayList<Member>();
     	
     	Member member1 = new Member();
     	member1.setUserId("id1");;
@@ -89,17 +89,12 @@ public class CmsLoginController {
     	member2.setUserName("이순신");
     	member2.setPassword("4444");    	
     	members.add(member2);
-    	
+    	*/
     	
     	List<Member> members1 = memberService.gets();
     	
-    	
-    	
     	model.addAttribute("members", members1);
     	
-    	
-    	
-
         return "cms/member/memberList";
     }
     
