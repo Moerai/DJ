@@ -10,12 +10,33 @@
     <meta name="Author" content="">
     <meta name="Keywords" content="">
     <meta name="Description" content="">
-    <link rel="stylesheet" href="../../../../htmls/css/JSstyle.css">
+    <link rel="stylesheet" href="/css/JSstyle.css">
     <title>Document</title>
+    
+    <script type="text/javascript">
+  //registerCheckFunction->button ID CHECK를 누르면 실행되는 함수
+    function registerCheckFunction() {
+        //id가 userID인 variable을 저장
+        var userID = $('#userID').val();
+            //ajax : jquery안에 포함되어있는 것
+            $.ajax({
+                type : 'POST',
+                url : './UserRegisterCheckServlet', //여기로 가서 function을 실행할꺼에요
+                data : {
+                    userID : userID
+                },
+                success : function(result) { //result를 받아올꺼죠
+                 
+                }
+            })
+        }
+      
+    </script>
+
 </head>
 <body>
     <table border="2" bgcolor="" align="center" class="table">
-        <FORM action = "registerchecked" method = "post" onsubmit="return input_check_func()">
+        <form method = "post" onsubmit="return input_check_func()">
             <tr>
                 <td class="td">닉네임</td>
                 <td>
@@ -25,40 +46,40 @@
             <tr>
                 <td class="td">아이디</td>
                 <td>
-                    <input type="text" id = "register-id" name = "register-id"/>
+                    <input type="text" id = "userId" name = "userId"/>
                 </td>
             </tr>
             
             <tr>
                 <td class="td">비밀번호</td>
                 <td>
-                    <input type="password" id = "register-pw" name = "register-pw"/>
+                    <input type="password" id = "password" name = "password"/>
                 </td>
             </tr>
             <tr>
                 <td class="td">비밀번호확인</td>
                 <td>
-                    <input type="password" id = "pw-check" name = "pw-check"/>
+                    <input type="password" id = "passwordcheck" name = "passwordcheck"/>
                 </td>
             </tr>
             <tr>
                 <td class="td">이메일</td>
                 <td>
-                    <input type="text" name = "mail-id"/>@
-                    <input type="text" name = "mailaddr" />
+                    <input type="text" id = "mailid"name = "mailid"/>@
+                    <input type="text" id = "mailaddr" name = "mailaddr" />
                 </td>
             </tr>
             <tr>
                 <td class="td">휴대전화</td>
                 <td>
-                    <input type="text" size="6" name = "phone1"/>-
-                    <input type="text" size="6" name = "phone2"/>-
-                    <input type="text" size=6 name = "phone3"/>
+                    <input type="text" size="6" id = "phone1"name = "phone1"/>-
+                    <input type="text" size="6" id = "phone2" name = "phone2"/>-
+                    <input type="text" size=6  id ="phone3" name = "phone3"/>
             </tr>
             <tr>
                 <td class="td">주소</td>
                 <td>
-                    <input type="text" name = "addr"/>
+                    <input type="text" id = "addr" name = "addr"/>
             </tr>
             <tr>
                 <td class="td"></td>
