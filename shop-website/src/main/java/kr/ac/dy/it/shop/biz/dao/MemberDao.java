@@ -12,4 +12,5 @@ public interface MemberDao {
 	List<Member> select();
 	Member selectUser(Member param);
 
+	int insertUser(Member parameter);
 }
