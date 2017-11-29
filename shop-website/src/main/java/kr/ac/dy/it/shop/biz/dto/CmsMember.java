@@ -13,4 +13,6 @@ public class CmsMember {
     String id;
     String pw;
     String name;
+    
+    
 }

@@ -19,39 +19,48 @@ import java.util.List;
 
 @Controller
 public class CmsLoginController {
-
 	@Autowired
 	MemberService memberService;
-
 	@Autowired
 	CmsMemberService cmsMemberService;
-
 	// 로그인
 	@RequestMapping("/cms/login")
-	public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
-
+	public String login(HttpSession session) {
+		if(session.getAttribute("id") != null)
+			return "redirect:/cms/member/memberList";
+		
 		return "cms/login";
+	}
+	
+	// 로그아웃
+	@RequestMapping("/cms/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();//session id초기화
+		
+		return "redirect:/cms/login";
 	}
 
 	// 로그인
 	@RequestMapping(path = "/cms/login", method = RequestMethod.POST)
 	public String loginSubmit(Model model, CmsMember parameter, HttpSession session) {
-		if (parameter.getId() == null || parameter.getPw() == null) {
+		if (parameter.getId().isEmpty()) {
 			throw new FrontException("아이디를 입력해주세요.", "cms/login");
+		}else if( parameter.getPw().isEmpty()) {
+			throw new FrontException("비밀번호를 입력해주세요.","cms/login");
 		}
 
 		CmsMember member = cmsMemberService.selectCmsMemberById(parameter.getId());
 
 		if (member == null) {
-			throw new FrontException("아이디가 없습니다.", "cms/login");
+			throw new FrontException("아이디 혹은 비밀번호가 올바르지 않습니다.", "cms/login");
 		} else {
 			if (member.getPw().equals(parameter.getPw())) {
 				session.setAttribute("id", member.getId());
 				return "redirect:/cms/member/memberList";
+			}else {
+				throw new FrontException("아이디 혹은 비밀번호가 올바르지 않습니다.", "cms/login");
 			}
 		}
-
-		return "cms/login";
 	}
 
 	@RequestMapping(path = "/cms/test", method = { RequestMethod.POST, RequestMethod.GET })
