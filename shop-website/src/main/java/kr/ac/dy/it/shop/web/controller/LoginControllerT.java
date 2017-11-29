@@ -13,12 +13,24 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginControllerT {
 
     @Autowired
-    MemberService memberService;
+    MemberService loginService;
     
     @RequestMapping("/login/loginpage")
-    public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "login/loginpage";
+    }
+
+    
+    @RequestMapping("/login/loginchecked")
+    public String loginchecked(Model model, HttpServletRequest request, HttpServletResponse response) {
+    	
+        return "login/loginchecked";
+    }
+    @RequestMapping("/login/login_finish")
+    public String loginfinish(Model model, HttpServletRequest request, HttpServletResponse response) {
+    	
+        return "login/login_finish";
     }
   
 }

@@ -13,11 +13,21 @@ import javax.servlet.http.HttpServletResponse;
 public class RegisterController {
 
     @Autowired
-    MemberService memberService;
+    MemberService registerService;
     
     @RequestMapping("/login/register")
-    public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String register(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "login/register";
+    }
+    @RequestMapping("/login/registerchecked")
+    public String registerchecked(Model model, HttpServletRequest request, HttpServletResponse response) {
+    	
+        return "login/registerchecked";
+    }
+    @RequestMapping("/login/registerFinish")
+    public String registerFinish(Model model, HttpServletRequest request, HttpServletResponse response) {
+    	
+        return "login/registerFinish";
     }
 }
