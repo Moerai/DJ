@@ -26,7 +26,7 @@ background:#D5D5D5;
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
-	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar2.jsp"></jsp:include>
 
 	<h1 align="center">FAQ</h1>
 <table align = "center">
