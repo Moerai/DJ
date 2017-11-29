@@ -34,12 +34,10 @@
     <div id="sidebar">
         <ul>
             <li><h1>게시판관리</h1></li>
-            <li><a href="../board/boardList">-게시판관리</a></li>
-            <li><a href="../board/boardRegister">-게시판등록</a></li>
-            <li><a href="../board/notice">-공지사항</a></li>
-            <li><a href="../board/noticeClassify">-상세공지</a></li>
-            <li><a href="../board/faqadd">-FAQ등록</a></li>
-            <li><a href="../board/faq">-FAQ관리</a></li>
+            <li><a href="../board/boardList">- 게시판 목록</a></li>
+            <li><a href="../board/boardRegister">- 게시판 수정</a></li>
+            
+
         </ul>
     </div>
 </body>
