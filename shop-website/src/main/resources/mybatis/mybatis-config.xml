@@ -28,5 +28,6 @@
 	<mappers>
 		<!--<package name="mybatis.mapper"/>-->
 		<mapper resource="mybatis/mapper/MemberDao.xml"/>
+		<mapper resource="mybatis/mapper/cmsMemberDao.xml"/>
 	</mappers>
 </configuration>

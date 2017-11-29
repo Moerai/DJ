@@ -11,4 +11,5 @@ public interface MemberDao {
 
 	List<Member> select();
 	Member selectUser(Member param);
+
 }

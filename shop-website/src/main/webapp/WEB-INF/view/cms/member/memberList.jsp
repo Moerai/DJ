@@ -51,20 +51,6 @@ adption {
 			<th>주소</th>
 			<th>생일</th>
 		</tr>
-		<c:forEach var="member" items="${members}">
-			<tr>
-				<td>${member.userName}</td>
-				<td></td>
-				<td>${member.userId }</td>
-				<td>${member.password }</td>
-				<td>${member.exp}</td>
-				<td>${member.nickName }</td>
-				<td>${member.email}</td>
-				<td>${member.phone }</td>
-				<td> </td>
-				<td>${member.birthday }</td>
-			</tr>
-		</c:forEach>
 	</table>
 </body>
 </html>

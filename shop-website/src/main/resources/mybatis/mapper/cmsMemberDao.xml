@@ -18,24 +18,12 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.ac.dy.it.shop.biz.dao.MemberDao">
+<mapper namespace="kr.ac.dy.it.shop.biz.dao.CmsMemberDao">
 
-
-
-    <select id="select" parameterType="kr.ac.dy.it.shop.biz.dto.Member" resultType="kr.ac.dy.it.shop.biz.dto.Member">
-        SELECT *
-        FROM MEMBER
-    </select>
-	
-	<select id="selectUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member" resultType="kr.ac.dy.it.shop.biz.dto.Member">
+    <select id="selectCmsMemberById" parameterType="String" resultType="kr.ac.dy.it.shop.biz.dto.CmsMember">
 		SELECT *
-		FROM MEMBER
-		WHERE USER_ID = #{userId} AND PASSWORD = #{password}
+		FROM CMS_MEMBER
+		WHERE ID=#{id}
 	</select>
-	
-	<insert id="insertUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member">
-		INSERT INTO MEMBER(USER_ID, USER_NAME, PASSWORD)
-		VALUES (#{userId}, #{userName}, #{password})
 
-	</insert>
 </mapper>
