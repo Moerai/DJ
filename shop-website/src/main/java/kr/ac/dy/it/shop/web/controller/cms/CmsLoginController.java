@@ -20,84 +20,93 @@ import java.util.List;
 @Controller
 public class CmsLoginController {
 
-    @Autowired
-    MemberService memberService;
+	@Autowired
+	MemberService memberService;
 
-    @Autowired
-    CmsMemberService cmsMemberService;
+	@Autowired
+	CmsMemberService cmsMemberService;
 
-    //로그인
-    @RequestMapping("/cms/login")
-    public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
+	// 로그인
+	@RequestMapping("/cms/login")
+	public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-        return "cms/login";
-    }
-    //로그인
-    @RequestMapping(path = "/cms/login", method = RequestMethod.POST)
-    public String loginSubmit(Model model, CmsMember parameter, HttpSession session) {
-        if(parameter.getId() == null || parameter.getPw() == null){
-            throw new FrontException("아이디를 입력해주세요.", "cms/login");
-        }
+		return "cms/login";
+	}
 
-        CmsMember member = cmsMemberService.selectCmsMemberById(parameter.getId());
+	// 로그인
+	@RequestMapping(path = "/cms/login", method = RequestMethod.POST)
+	public String loginSubmit(Model model, CmsMember parameter, HttpSession session) {
+		if (parameter.getId() == null || parameter.getPw() == null) {
+			throw new FrontException("아이디를 입력해주세요.", "cms/login");
+		}
 
-        if(member == null){
-            throw new FrontException("아이디가 없습니다.", "cms/login");
-        }else{
-            if(member.getPw().equals(parameter.getPw())){
-                session.setAttribute("id", member.getId());
-                return "redirect:/cms/member/memberList";
-            }
-        }
+		CmsMember member = cmsMemberService.selectCmsMemberById(parameter.getId());
 
+		if (member == null) {
+			throw new FrontException("아이디가 없습니다.", "cms/login");
+		} else {
+			if (member.getPw().equals(parameter.getPw())) {
+				session.setAttribute("id", member.getId());
+				return "redirect:/cms/member/memberList";
+			}
+		}
 
-        return "cms/login";
-    }
+		return "cms/login";
+	}
 
-    @RequestMapping(path = "/cms/test", method = {RequestMethod.POST,RequestMethod.GET})
-    public String test(Model model, HttpServletRequest request, HttpServletResponse response) {
+	@RequestMapping(path = "/cms/test", method = { RequestMethod.POST, RequestMethod.GET })
+	public String test(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-        //로그인
+		// 로그인
 
+		return "cms/test";
+	}
 
-        return "cms/test";
-    }
+	// 회원가입
+	@RequestMapping("/member/register")
+	public String memberRegister(Model model, HttpServletRequest request, HttpServletResponse response) {
 
-    //회원가입
-    @RequestMapping("/member/register")
-    public String memberRegister(Model model, HttpServletRequest request, HttpServletResponse response) {
+		return "member/register";
+	}
 
-        return "member/register";
-    }
+	// 탈퇴회원
+	@RequestMapping("/cms/member/memberse")
+	public String memberse(Model model, HttpServletRequest request, HttpServletResponse response) {
 
+		List<Member> members1 = memberService.gets();
 
-    //회원관리
-    @RequestMapping("/cms/member/memberList")
-    public String member(Model model, HttpServletRequest request, HttpServletResponse response) {
-    	
-    	
-    	/*List<Member> members = new ArrayList<Member>();
-    	
-    	Member member1 = new Member();
-    	member1.setUserId("id1");;
-    	member1.setUserName("홍길동");
-    	member1.setPassword("1223");    	
-    	members.add(member1);    	
-    	
-    	Member member2 = new Member();
-    	member2.setUserId("id2");;
-    	member2.setUserName("이순신");
-    	member2.setPassword("4444");    	
-    	members.add(member2);
-    	*/
-    	
-    	List<Member> members1 = memberService.gets();
-    	
-    	model.addAttribute("members", members1);
-    	
-        return "cms/member/memberList";
-    }
-    
-    
+		model.addAttribute("members", members1);
+		return "cms/member/memberse";
+	}
+
+	// 회원등급
+	@RequestMapping("/cms/member/memberRank")
+	public String memberRank(Model model, HttpServletRequest request, HttpServletResponse response) {
+
+		return "cms/member/memberRank";
+	}
+
+	// 회원관리
+	@RequestMapping("/cms/member/memberList")
+	public String member(Model model, HttpServletRequest request, HttpServletResponse response) {
+
+		/*
+		 * List<Member> members = new ArrayList<Member>();
+		 * 
+		 * Member member1 = new Member(); member1.setUserId("id1");;
+		 * member1.setUserName("홍길동"); member1.setPassword("1223");
+		 * members.add(member1);
+		 * 
+		 * Member member2 = new Member(); member2.setUserId("id2");;
+		 * member2.setUserName("이순신"); member2.setPassword("4444");
+		 * members.add(member2);
+		 */
+
+		List<Member> members1 = memberService.gets();
+
+		model.addAttribute("members", members1);
+
+		return "cms/member/memberList";
+	}
 
 }
