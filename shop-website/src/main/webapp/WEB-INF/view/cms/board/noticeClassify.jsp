@@ -26,10 +26,10 @@ background:#D5D5D5;
 </head>
 <body>
 	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp" ></jsp:include>
-	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/view/cms/board/board_sidebar2.jsp"></jsp:include>
 	<h1 align="center"><br><br><br> 고객센터 - 공지사항_상세<br><br> </h1>
 
-<table>
+<table align = "center">
 		<colgroup>
 			<col style="width:100px;">
 			<col style="width:200px;">
