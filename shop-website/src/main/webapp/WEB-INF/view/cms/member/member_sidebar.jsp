@@ -19,6 +19,7 @@
     width:220px;
     height:600px;
     float:left;
+    display: block;
     margin-left:30px;
     padding-left:50px;
     background-color: #DAC1AD;

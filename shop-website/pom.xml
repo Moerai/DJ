@@ -83,7 +83,6 @@
 		</dependency>
 
 
-
 		<!-- https://mvnrepository.com/artifact/com.googlecode.log4jdbc/log4jdbc -->
 		<dependency>
 			<groupId>com.googlecode.log4jdbc</groupId>

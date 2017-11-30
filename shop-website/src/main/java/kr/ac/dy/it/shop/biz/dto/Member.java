@@ -9,8 +9,7 @@ import lombok.ToString;
 @EqualsAndHashCode
 
 public class Member {
-	
-	
+
 	String userName;
 	String state;
 	String userId;
@@ -20,5 +19,4 @@ public class Member {
 	String phone;
 	String address;
 	String studentNum;
-
 }

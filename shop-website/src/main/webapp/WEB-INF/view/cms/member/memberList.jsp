@@ -50,7 +50,6 @@ adption {
 			<th>주소</th>
 			<th>학번</th>
 		</tr>
-
 		<c:forEach var="member" items="${members}">
 			<tr>
 				<td>${member.userName}</td>
@@ -64,7 +63,5 @@ adption {
 				<td>${member.studentNum}</td>
 			</tr>
 		</c:forEach>
-
-	</table>
-</body>
+	</table></body>
 </html>

@@ -18,36 +18,34 @@ ul li div{
 }
 
 #frame{
-	width:100%;
+	width: 1440px;
 	height:150px;
 	background-color: #728CA8;
-	margin-bottom: 20px;
+	margin: auto;
 }
 #logoimg{
 	height: 150px;
-	width: 100%;
+	width: 280px;
 }
 #logo {
 	height: 150px;
 	width: 280px;
 	float:left;
-	position:static;
+	display: block;
 	margin-left:20px;
 }
 
 #select {
-	width: 1000px;
+	width: 600px;
 	height: 150px;
-	/*background-color:red;*/
 	float:left;
-	margin:auto;
-	position:static;
+	display: block;
 }
 
 #select ul li {
 	line-height: 50px;
-	margin:auto;
-	padding: 50px;
+	float: left;
+	padding: 30px;
 	display:inline-block;
 	font-weight:bold;
 }
@@ -56,10 +54,9 @@ ul li div{
 	width: 180px;
 	height: 140px;
 	float: left;
-	position:static;
+	display: block;
 	padding-left:120px;
 	padding-top:10px;
-	/*background-color: #2b542c;*/
 }
 
 </style>
@@ -77,7 +74,7 @@ ul li div{
 				<li><a href="../ad/manageAD">광고관리</a></li>
 			</ul>
 		</div>
-		<form ACTION="" method="post">
+		<form ACTION="/cms/logout" method="post">
 		<div id="logout"><input type="submit" value="logout" style="font-size:10px; height:20px; width:50px;
 			 	position:absolute; margin:auto"></div>
 		</form>

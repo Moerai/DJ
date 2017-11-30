@@ -15,38 +15,6 @@ public class CmsBoardController {
     @Autowired
     MemberService memberService;
 
-    //광고관리
-    @RequestMapping("/cms/ad/manageAD")
-    public String ad(Model model, HttpServletRequest request, HttpServletResponse response) {
-
-        return "cms/ad/manageAD";
-    }
-    
-    
-    //상품등록
-    @RequestMapping("/cms/market/productadd")
-    public String productadd(Model model, HttpServletRequest request, HttpServletResponse response) {
-
-
-
-        return "cms/market/productadd";
-    }
-
-    //상품리스트
-    @RequestMapping("/cms/market/productList")
-    public String productList(Model model, HttpServletRequest request, HttpServletResponse response) {
-
-
-
-        return "cms/market/productList";
-    }
-
-    //금지어목록
-    @RequestMapping("/cms/market/productProhibit")
-    public String prohibit(Model model, HttpServletRequest request, HttpServletResponse response) {
-
-        return "cms/market/productProhibit";
-    }
 
     //공지사항관리
     @RequestMapping("/cms/board/notice")
@@ -58,7 +26,7 @@ public class CmsBoardController {
     //게시판관리
     @RequestMapping("/cms/board/boardList")
     public String boardList(Model model, HttpServletRequest request, HttpServletResponse response) {
-
+        model.addAttribute("members",memberService.gets());
         return "cms/board/boardList";
     }
 
