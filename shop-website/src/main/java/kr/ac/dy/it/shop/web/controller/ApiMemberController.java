@@ -34,11 +34,11 @@ public class ApiMemberController {
 	@ResponseBody
 	public ResponseData<Object> register(Model model, HttpServletRequest request, HttpServletResponse response,
 			Member parameter) {
-		
+
+		boolean result= memberService.addMember(parameter);
 		parameter.setUserName(parameter.getUserName() + "바보");
-		
-		
-		return new ResponseData<Object>(true, parameter);
+
+		return new ResponseData<Object>(result,(result ? "회원가입 성공":"회원가입 실패"));
 		
 
 	}
