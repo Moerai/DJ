@@ -2,6 +2,7 @@ package kr.ac.dy.it.shop.web.controller.cms;
 
 import kr.ac.dy.it.shop.biz.dto.Member;
 import kr.ac.dy.it.shop.biz.service.MemberService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
+@Slf4j
 @Controller
 public class CmsMemberController {
 
@@ -62,9 +64,23 @@ public class CmsMemberController {
 
 	// 회원수정
 	@RequestMapping("/cms/member/memberModifi")
-	public String memberModifier(Model model, HttpSession session) {
-		if(session.getAttribute("id") == null)
+	public String memberModifier(Model model, HttpSession session
+	, Member parameter) {
+
+		/*if(session.getAttribute("id") == null) {
 			return "redirect:/cms/login";
+		}*/
+
+		log.info("############################################");
+		log.info(parameter.toString());
+		log.info(parameter.getUserId());
+
+		Member member = memberService.getMemberByUserId(parameter.getUserId());
+
+		log.info("############################################");
+		log.info(member.toString());
+
+		model.addAttribute("member", member);
 
 		return "cms/member/memberModifi";
 	}

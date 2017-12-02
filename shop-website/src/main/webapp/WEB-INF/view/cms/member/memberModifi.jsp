@@ -12,5 +12,10 @@
 </head>
 <body>
 <p>회원정보 수정페이지</p>
+
+
+${member}
+
+
 </body>
 </html>

@@ -26,13 +26,22 @@
         SELECT *
         FROM MEMBER
     </select>
+
+
 	
 	<select id="selectUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member" resultType="kr.ac.dy.it.shop.biz.dto.Member">
 		SELECT *
 		FROM MEMBER
 		WHERE USER_ID = #{userId} AND PASSWORD = #{password}
 	</select>
-	
+
+	<select id="selectUserByUserId" parameterType="kr.ac.dy.it.shop.biz.dto.Member" resultType="kr.ac.dy.it.shop.biz.dto.Member">
+		SELECT *
+		FROM MEMBER
+		WHERE USER_ID = #{userId}
+	</select>
+
+
 	<insert id="insertUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member">
 		INSERT INTO MEMBER(USER_ID, USER_NAME, PASSWORD, NICKNAME, PHONE, ADDRESS, STUDENT_NUM)
 		VALUES (#{userId}, #{userName}, #{password}, #{nickName}, #{phone}, #{address}, #{studentNum})

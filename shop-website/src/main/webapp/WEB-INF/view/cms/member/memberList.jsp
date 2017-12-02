@@ -54,7 +54,6 @@ adption {
 
 		<c:forEach var="member" items="${members}">
 			<tr>
-				<form action="/cms/member/memberModifi" method="post">
 					<td>${member.userName}</td>
 					<td>${member.state}</td>
 					<td>${member.userId }</td>
@@ -64,8 +63,11 @@ adption {
 					<td>${member.phone}</td>
 					<td>${member.address}</td>
 					<td>${member.studentNum}</td>
-					<td><input type="submit" value="수정"></td>
-				</form>
+					<td>
+						<a href="memberModifi?userId=${member.userId}">
+							수정
+						</a>
+					</td>
 			</tr>
 		</c:forEach>
 	</table></body>

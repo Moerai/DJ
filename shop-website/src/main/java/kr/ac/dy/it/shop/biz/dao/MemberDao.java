@@ -13,4 +13,9 @@ public interface MemberDao {
 	Member selectUser(Member param);
 
 	int insertUser(Member parameter);
+
+	Member selectUserByUserId(Member parameter);
+
+
+
 }

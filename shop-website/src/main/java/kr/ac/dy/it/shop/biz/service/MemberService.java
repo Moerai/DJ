@@ -42,4 +42,13 @@ public class MemberService {
 		int affected = memberDao.insertUser(parameter);		
 		return affected > 0;
 	}
+
+	public Member getMemberByUserId(String userId) {
+
+		Member parameter = new Member();
+		parameter.setUserId(userId);
+
+		return memberDao.selectUserByUserId(parameter);
+
+	}
 }
