@@ -18,10 +18,10 @@
 
             <form method="post">
 
-                <input type="text" placeholder="아이디" id="userid" name="id" class="f"
+                <input type="text" placeholder="아이디" id="userid" name="id" class="f" required
                        style="height:40px; margin-top:10%;"/>
 
-                <input type="password" placeholder="비밀번호" id="password" name="pw"
+                <input type="password" placeholder="비밀번호" id="password" name="pw" required
                        style="height:40px; margin-top:10%;">
 
                 <input type="submit" value="로그인" style="font-size:20px; height:120px; width:120px;
