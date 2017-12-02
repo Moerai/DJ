@@ -54,7 +54,7 @@ adption {
 
 		<c:forEach var="member" items="${members}">
 			<tr>
-				<form action=/cms/member/memberModifi" method="post">
+				<form action="/cms/member/memberModifi" method="post">
 					<td>${member.userName}</td>
 					<td>${member.state}</td>
 					<td>${member.userId }</td>

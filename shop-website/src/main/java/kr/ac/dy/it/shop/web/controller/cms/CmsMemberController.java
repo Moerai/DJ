@@ -62,7 +62,7 @@ public class CmsMemberController {
 
 	// 회원수정
 	@RequestMapping("/cms/member/memberModifi")
-	public String memberModifi(Model model, HttpSession session) {
+	public String memberModifier(Model model, HttpSession session) {
 		if(session.getAttribute("id") == null)
 			return "redirect:/cms/login";
 
