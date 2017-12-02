@@ -59,4 +59,13 @@ public class CmsMemberController {
 
 		return "cms/member/memberList";
 	}
+
+	// 회원수정
+	@RequestMapping("/cms/member/memberModifi")
+	public String memberModifi(Model model, HttpSession session) {
+		if(session.getAttribute("id") == null)
+			return "redirect:/cms/login";
+
+		return "cms/member/memberModifi";
+	}
 }

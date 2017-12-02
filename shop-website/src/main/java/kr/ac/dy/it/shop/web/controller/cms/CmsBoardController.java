@@ -6,8 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class CmsBoardController {
@@ -18,42 +17,54 @@ public class CmsBoardController {
 
     //공지사항관리
     @RequestMapping("/cms/board/notice")
-    public String notice(Model model, HttpServletRequest request, HttpServletResponse response) {
-
+    public String notice(Model model, HttpSession session) {
+        if(session.getAttribute("id") == null)
+            return "redirect:/cms/login";
         return "cms/board/notice";
     }
 
     //게시판관리
     @RequestMapping("/cms/board/boardList")
-    public String boardList(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String boardList(Model model, HttpSession session) {
+        if(session.getAttribute("id") == null)
+            return "redirect:/cms/login";
+
         model.addAttribute("members",memberService.gets());
         return "cms/board/boardList";
     }
 
     //게시판등록
     @RequestMapping("/cms/board/boardRegister")
-    public String boardRegister(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String boardRegister(Model model, HttpSession session) {
+        if(session.getAttribute("id") == null)
+            return "redirect:/cms/login";
 
         return "cms/board/boardRegister";
     }
 
     //공지상세
     @RequestMapping("/cms/board/noticeClassify")
-    public String classfy(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String classfy(Model model, HttpSession session) {
+        if(session.getAttribute("id") == null)
+            return "redirect:/cms/login";
 
         return "cms/board/noticeClassify";
     }
 
     //Q&A
     @RequestMapping("/cms/board/faqadd")
-    public String qna(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String qna(Model model, HttpSession session) {
+        if(session.getAttribute("id") == null)
+            return "redirect:/cms/login";
 
         return "cms/board/faqadd";
     }
 
     //FAQ
     @RequestMapping("/cms/board/faq")
-    public String faq(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String faq(Model model, HttpSession session) {
+        if(session.getAttribute("id") == null)
+            return "redirect:/cms/login";
 
         return "cms/board/faq";
     }

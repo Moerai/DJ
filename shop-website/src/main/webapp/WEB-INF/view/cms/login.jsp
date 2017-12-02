@@ -16,13 +16,10 @@
         <div>
             <strong style="font-size:30px;">LOGIN</strong>
 
-            <br/>
             <form method="post">
 
                 <input type="text" placeholder="아이디" id="userid" name="id" class="f"
                        style="height:40px; margin-top:10%;"/>
-
-                <br/>
 
                 <input type="password" placeholder="비밀번호" id="password" name="pw"
                        style="height:40px; margin-top:10%;">

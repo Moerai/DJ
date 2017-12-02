@@ -6,8 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class CmsADController {
@@ -17,7 +16,9 @@ public class CmsADController {
 
     //광고관리
     @RequestMapping("/cms/ad/manageAD")
-    public String ad(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String ad(Model model, HttpSession session) {
+        if(session.getAttribute("id") == null)
+            return "redirect:/cms/login";
 
         return "cms/ad/manageAD";
     }

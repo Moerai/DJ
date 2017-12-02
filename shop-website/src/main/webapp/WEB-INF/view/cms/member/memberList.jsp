@@ -49,18 +49,23 @@ adption {
 			<th>휴대폰</th>
 			<th>주소</th>
 			<th>학번</th>
+			<th>관리</th>
 		</tr>
+
 		<c:forEach var="member" items="${members}">
 			<tr>
-				<td>${member.userName}</td>
-				<td>${member.state}</td>
-				<td>${member.userId }</td>
-				<td>${member.password }</td>
-				<td>${member.exp}</td>
-				<td>${member.nickName }</td>
-				<td>${member.phone}</td>
-				<td>${member.address}</td>
-				<td>${member.studentNum}</td>
+				<form action=/cms/member/memberModifi" method="post">
+					<td>${member.userName}</td>
+					<td>${member.state}</td>
+					<td>${member.userId }</td>
+					<td>${member.password }</td>
+					<td>${member.exp}</td>
+					<td>${member.nickName }</td>
+					<td>${member.phone}</td>
+					<td>${member.address}</td>
+					<td>${member.studentNum}</td>
+					<td><input type="submit" value="수정"></td>
+				</form>
 			</tr>
 		</c:forEach>
 	</table></body>

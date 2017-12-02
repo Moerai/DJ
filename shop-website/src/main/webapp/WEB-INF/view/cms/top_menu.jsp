@@ -36,7 +36,7 @@ ul li div{
 }
 
 #select {
-	width: 600px;
+	width: 800px;
 	height: 150px;
 	float:left;
 	display: block;
