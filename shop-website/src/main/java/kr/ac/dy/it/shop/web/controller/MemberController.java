@@ -32,16 +32,11 @@ public class MemberController {
     }
     
     @RequestMapping("/member/registerfinish")
-    public String registerFinish(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String registerfinish(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/registerfinish";
     }
     
-    @RequestMapping("/")
-    public String main(Model model, HttpServletRequest request, HttpServletResponse response) {
-    	
-        return "member/main";
-    }
     
     @RequestMapping("/member/front")
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
