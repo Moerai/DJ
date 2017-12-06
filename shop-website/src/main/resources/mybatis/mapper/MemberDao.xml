@@ -46,4 +46,43 @@
 		INSERT INTO MEMBER(USER_ID, USER_NAME, PASSWORD, NICKNAME, EMAIL, PHONE, ADDRESS, STUDENT_NUM)
 		VALUES (#{userId}, #{userName}, #{password}, #{nickName}, #{email}, #{phone}, #{address}, #{studentNum})
 	</insert>
+	
+	<select id="selectExp" 
+		parameterType="kr.ac.dy.it.shop.biz.dto.Member" 
+		resultType="kr.ac.dy.it.shop.biz.dto.Member" >
+				
+		SELECT
+			'브론즈' AS MEMBER_LEVEL
+			, (SELECT COUNT(*) FROM MEMBER WHERE EXP <![CDATA[>=]]> 0 AND EXP <![CDATA[<]]> 5) AS MEMBER_COUNT
+		FROM DUAL
+		
+		UNION
+		
+		SELECT
+			'실버' AS MEMBER_LEVEL
+			, (SELECT COUNT(*) FROM MEMBER WHERE EXP <![CDATA[>=]]> 5 AND EXP <![CDATA[<]]> 10) AS MEMBER_COUNT
+		FROM DUAL
+		
+		UNION
+		
+		SELECT
+			'골드' AS MEMBER_LEVEL
+			, (SELECT COUNT(*) FROM MEMBER WHERE EXP <![CDATA[>=]]> 10 AND EXP <![CDATA[<]]> 15) AS MEMBER_COUNT
+		FROM DUAL
+		
+		UNION
+		
+		SELECT
+			'다이아' AS MEMBER_LEVEL
+			, (SELECT COUNT(*) FROM MEMBER WHERE EXP <![CDATA[>=]]> 15 AND EXP <![CDATA[<]]> 20) AS MEMBER_COUNT
+		FROM DUAL
+		
+		UNION
+		
+		SELECT
+			'마스터' AS MEMBER_LEVEL
+			, (SELECT COUNT(*) FROM MEMBER WHERE EXP <![CDATA[>=]]> 20) AS MEMBER_COUNT
+		FROM DUAL
+
+	</select>
 </mapper>
