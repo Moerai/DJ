@@ -10,14 +10,7 @@ import java.util.List;
 @Mapper
 public interface BoardDao {
 
-	List<Board> select();
-	Board selectUser(Board param);
-
+	List<Board> boardSelect();
 	int insertBoard(Board parameter);
-	
-
-	Board selectUserByUserId(Board parameter);
-
-
 
 }
