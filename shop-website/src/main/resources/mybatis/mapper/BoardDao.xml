@@ -20,7 +20,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.ac.dy.it.shop.biz.dao.MemberDao">
 
-<insert id="insertUser" parameterType="kr.ac.dy.it.shop.biz.dto.BoardDao">
+<insert id="insertBoard" parameterType="kr.ac.dy.it.shop.biz.dto.BoardDao">
 		INSERT INTO MEMBER(USER_ID, NICKNAME, BOARD_TYPE, TITLE, CONTENT, REG_DT)
 		VALUES (#{userId}, #{nickname}, #{boardType}, #{title}, #{content}, #{regDt})
 	</insert>
