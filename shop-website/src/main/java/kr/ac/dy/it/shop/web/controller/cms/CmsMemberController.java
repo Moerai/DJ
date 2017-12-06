@@ -21,27 +21,40 @@ public class CmsMemberController {
 	// 탈퇴회원
 	@RequestMapping("/cms/member/memberse")
 	public String memberse(Model model, HttpSession session) {
-		if(session.getAttribute("id") == null)
+		if (session.getAttribute("id") == null)
 			return "redirect:/cms/login";
 
 		List<Member> members1 = memberService.gets();
 
-		model.addAttribute("memberse", members1);
+		model.addAttribute("members", members1);
 		return "cms/member/memberse";
 	}
 
 	// 회원등급
 	@RequestMapping("/cms/member/memberRank")
-	public String memberRank(Model model, HttpSession session) {
-		if(session.getAttribute("id") == null)
+	public String memberRank(Model model, HttpSession session
+			, Member parameter) {
+		if (session.getAttribute("id") == null) {
 			return "redirect:/cms/login";
+		}
+		
+		List<Member> members = memberService.getMemberLevelCount(parameter);
+		
+		log.info("##############################################");
+		log.info("##############################################");
+		log.info("##############################################");
+		log.info("##############################################");
+		log.info(members.toString());
+
+		model.addAttribute("members", members);
+		
 		return "cms/member/memberRank";
 	}
 
 	// 회원관리
 	@RequestMapping("/cms/member/memberList")
 	public String member(Model model, HttpSession session) {
-		if(session.getAttribute("id") == null)
+		if (session.getAttribute("id") == null)
 			return "redirect:/cms/login";
 		/*
 		 * List<Member> members = new ArrayList<Member>();
@@ -64,12 +77,11 @@ public class CmsMemberController {
 
 	// 회원수정
 	@RequestMapping("/cms/member/memberModifi")
-	public String memberModifier(Model model, HttpSession session
-	, Member parameter) {
+	public String memberModifier(Model model, HttpSession session, Member parameter) {
 
-		/*if(session.getAttribute("id") == null) {
-			return "redirect:/cms/login";
-		}*/
+		/*
+		 * if(session.getAttribute("id") == null) { return "redirect:/cms/login"; }
+		 */
 
 		log.info("############################################");
 		log.info(parameter.toString());
