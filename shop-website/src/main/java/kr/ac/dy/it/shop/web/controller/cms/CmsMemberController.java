@@ -19,15 +19,15 @@ public class CmsMemberController {
 	MemberService memberService;
 
 	// 탈퇴회원
-	@RequestMapping("/cms/member/members")
+	@RequestMapping("/cms/member/memberse")
 	public String memberse(Model model, HttpSession session) {
 		if(session.getAttribute("id") == null)
 			return "redirect:/cms/login";
 
 		List<Member> members1 = memberService.gets();
 
-		model.addAttribute("members", members1);
-		return "cms/member/members";
+		model.addAttribute("memberse", members1);
+		return "cms/member/memberse";
 	}
 
 	// 회원등급
