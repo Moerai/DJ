@@ -2,7 +2,6 @@ package kr.ac.dy.it.shop.web.controller.cms;
 
 import kr.ac.dy.it.shop.biz.dto.CmsMember;
 import kr.ac.dy.it.shop.biz.service.CmsMemberService;
-import kr.ac.dy.it.shop.common.exception.FrontException;
 import kr.ac.dy.it.shop.common.util.ResponseUtils;
 import kr.ac.dy.it.shop.common.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +40,8 @@ public class CmsLoginController {
 	public String loginSubmit(Model model, HttpServletRequest request, HttpServletResponse response, HttpSession session
 			, CmsMember parameter) {
 
+		CmsMember member = cmsMemberService.selectCmsMemberById(parameter.getId());
+
 		// 입력값 체크
 		if (StringUtils.isEmpty(parameter.getId())) {
 			ResponseUtils.htmlAlertAndHistoryback(response, "아이디를 입력해주세요.");
@@ -48,21 +49,15 @@ public class CmsLoginController {
 		if (StringUtils.isEmpty(parameter.getPw())) {
 			ResponseUtils.htmlAlertAndHistoryback(response, "비밀번호를 입력해주세요.");
 		}
-
-		CmsMember member = cmsMemberService.selectCmsMemberById(parameter.getId());
-
 		if (member == null) {
 			ResponseUtils.htmlAlertAndHistoryback(response, "이디 혹은 비밀번호가 올바르지 않습니다.");
 			return "";
 		}
-
 		if (StringUtils.equals(member.getPw(), parameter.getPw())) {
-			ResponseUtils.htmlAlertAndHistoryback(response, "아이디 혹은 비밀번호가 올바르지 않습니다.");
-			return "";
+			session.setAttribute("id", member.getId());
+			return "redirect:/cms/member/memberList";
 		}
-
-		session.setAttribute("id", member.getId());
-		return "redirect:/cms/member/memberList";
+		ResponseUtils.htmlAlertAndHistoryback(response, "아이디 혹은 비밀번호가 올바르지 않습니다.");
+		return "";
 	}
-
 }

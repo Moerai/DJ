@@ -11,10 +11,21 @@
     <title>회원정보수정</title>
 </head>
 <body>
-<p>회원정보 수정페이지</p>
+<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/view/cms/member/member_sidebar.jsp" ></jsp:include>
+<div id="full">
 
+    <tr>
+        <tr>회원이름 : <input type="text" value="${member.userName}"></tr>
+        <tr>회원상태 : <input type="text" value="${member.state}"></tr>
+        <tr>아이디 : ${member.userId}</tr>
+        <tr>닉네임 : <input type="text" value="${member.nickName }"></tr>
+        <tr>헨드폰 : <input type="text" value="${member.phone}"></tr>
+        <tr>주소 : <input type="text" value="${member.address}"></tr>
+        <tr>학번 : <input type="text" value="${member.studentNum}"></tr>
+    </tr>
 
-${member}
+</div>
 
 
 </body>
