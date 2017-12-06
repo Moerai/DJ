@@ -68,7 +68,7 @@ ul li div{
 		<div id="select">
 			<ul>
 				<li><a href="../member/memberList">회원관리</a></li>
-				<li><a href="../market/productlist">장터관리</a></li>
+				<li><a href="../market/productList">장터관리</a></li>
 				<li><a href="../board/boardList">게시판관리</a></li>
 				<li><a href="../board/notice">공지사항</a></li>
 				<li><a href="../ad/manageAD">광고관리</a></li>
