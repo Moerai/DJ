@@ -43,7 +43,7 @@
 
 
 	<insert id="insertUser" parameterType="kr.ac.dy.it.shop.biz.dto.Member">
-		INSERT INTO MEMBER(USER_ID, USER_NAME, PASSWORD, NICKNAME, PHONE, ADDRESS, STUDENT_NUM)
-		VALUES (#{userId}, #{userName}, #{password}, #{nickName}, #{phone}, #{address}, #{studentNum})
+		INSERT INTO MEMBER(USER_ID, USER_NAME, PASSWORD, NICKNAME, EMAIL, PHONE, ADDRESS, STUDENT_NUM)
+		VALUES (#{userId}, #{userName}, #{password}, #{nickName}, #{email}, #{phone}, #{address}, #{studentNum})
 	</insert>
 </mapper>
