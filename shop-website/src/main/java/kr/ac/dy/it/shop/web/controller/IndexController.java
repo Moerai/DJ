@@ -21,8 +21,10 @@ public class IndexController {
 
     @RequestMapping("/")
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
+    	
+    	return "redirect:/member/main";
 
-        List<Member> memberList = memberService.gets();
+     /*   List<Member> memberList = memberService.gets();
         
         String name ="박성수";
         
@@ -37,7 +39,7 @@ public class IndexController {
 
 
         return "index"; //물리적 주소값을 반환해준다.
-    }
+*/    }
     
 
 
