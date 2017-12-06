@@ -39,10 +39,15 @@ public class MemberController {
     
     
     @RequestMapping("/member/front")
-    public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
+    public String front(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/front";
     }
 
+    @RequestMapping("/member/login")
+    public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
+    	
+        return "member/login";
+    }
 	
 }
