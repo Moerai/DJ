@@ -40,7 +40,6 @@ adption {
 		<br>
 	</h1>
 	<table align="center">
-
 		<tr>
 			<th>등급명</th>
 			<th width="200px">등급 설명</th>
@@ -48,7 +47,6 @@ adption {
 			<th width="200px">추가 적립</th>
 			<th>할인</th>
 		</tr>
-
 		<tr> 
 			<th>브론즈</th>
 			<td>0 ~ 5점</td>
@@ -56,7 +54,6 @@ adption {
 			<td>X</td>
 			<td>0%</td>
 		</tr>
-
 		<tr>
 			<th>실버</th>
 			<td>5 ~ 10점</td>
@@ -64,7 +61,6 @@ adption {
 			<td>X</td>
 			<td>10%</td>
 		</tr>
-
 		<tr>
 			<th>골드</th>
 			<td>10 ~ 15점</td>
@@ -72,7 +68,6 @@ adption {
 			<td>X</td>
 			<td>20%</td>
 		</tr>
-
 		<tr>
 			<th>다이아</th>
 			<td>15 ~ 20점</td>
@@ -80,7 +75,6 @@ adption {
 			<td>X</td>
 			<td>30%</td>
 		</tr>
-
 		<tr>
 			<th>마스터</th>
 			<td>20 ~ 25점</td>
@@ -89,8 +83,6 @@ adption {
 			</td>
 			<td>40%</td>
 		</tr>
-
-
 	</table>
 </body>
 </html>
