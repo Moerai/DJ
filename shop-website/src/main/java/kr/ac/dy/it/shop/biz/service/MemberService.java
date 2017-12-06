@@ -51,4 +51,16 @@ public class MemberService {
 		return memberDao.selectUserByUserId(parameter);
 
 	}
+	
+	
+	/**
+	 * 회원레벨별 회원수를 리턴함
+	 */
+	public List<Member> getMemberLevelCount(Member parameter) {
+		return memberDao.selectExp(parameter);
+	}
+	
+	
+	
+	
 }
