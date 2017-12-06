@@ -10,12 +10,12 @@
 <meta name="Author" content="">
 <meta name="Keywords" content="">
 <meta name="Description" content="">
-<link rel="stylesheet" href="css/JSstyle.css">
+<link rel="stylesheet" href="/css/JSstyle.css">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>Document</title>
 <center>
-	<img src="DJ-Logo.png" width="20%">
+	<img src="/images/DJ-Logo.png" width="20%">
 </center>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script type="text/javascript">
@@ -30,12 +30,12 @@
 					data : {
 						"userId" : $("#userId").val(),
 						"password" : $("#password").val(),
-						"nickName" : $("#nickname").val(),
+						"nickName" : $("#nickName").val(),
 						"emailid" : ($("#emailid").val() + "@" + $("#emailaddr")
 								.val()),
 						"phone" : $("indexNo").val() + $("#phone2").val()
 								+ $("#phone3").val(),
-						"addr" : $("#addr").val(),
+						"address" : $("#address").val(),
 						"studentNum" : $("#studentNum").val()
 					},
 					success : function(data) { //result를 받아올꺼죠
@@ -61,7 +61,7 @@
 		<form id="registerForm">
 		<tr>
 			<td class="td">닉네임</td>
-			<td><input type="text" id="nickname" /> <input type="button"
+			<td><input type="text" id="nickName" /> <input type="button"
 				value="중복확인" /></td>
 		</tr>
 		<tr>
@@ -118,7 +118,7 @@
 		</tr>
 		<tr>
 			<td class="td">주소</td>
-			<td><input type="text" id="addr" />
+			<td><input type="text" id="address" />
 		</tr>
 
 		<tr>
