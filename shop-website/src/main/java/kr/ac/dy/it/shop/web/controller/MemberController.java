@@ -25,26 +25,26 @@ public class MemberController {
     @Autowired
     MemberService registerService;
     
-    @RequestMapping("/member/register")
+    @RequestMapping("/register")
     public String register(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/register";
     }
     
-    @RequestMapping("/member/registerfinish")
+    @RequestMapping("/registerfinish")
     public String registerfinish(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/registerfinish";
     }
     
     
-    @RequestMapping("/member/front")
+    @RequestMapping("/front")
     public String front(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/front";
     }
 
-    @RequestMapping("/member/login")
+    @RequestMapping("/login")
     public String login(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/login";
