@@ -28,6 +28,7 @@
 					contentType : "application/x-www-form-urlencoded; charset=utf-8",
 					dataType : "json", //여기로 가서 function을 실행할꺼에요
 					data : {
+						"userName" : $("#userName").val(),
 						"userId" : $("#userId").val(),
 						"password" : $("#password").val(),
 						"nickName" : $("#nickName").val(),
@@ -60,6 +61,13 @@
 	<table border="2" bgcolor="" align="center" class="table"
 		cellpadding="5">
 		<form id="registerForm">
+		  <tr>
+                <td class="name">이름</td>
+                <td>
+                    <input type="name" id = "userName"/>
+                </td>
+            </tr>
+		<tr>
 		<tr>
 			<td class="td">닉네임</td>
 			<td><input type="text" id="nickName" /> <input type="button"
@@ -73,7 +81,7 @@
 			<td class="td">비밀번호</td>
 			<td><input type="password" id="password" /></td>
 		</tr>
-		<tr>
+		
 			<td class="td">비밀번호확인</td>
 			<td><input type="password" id="passwordcheck"
 				oninput="checkPwd()" /></td>
