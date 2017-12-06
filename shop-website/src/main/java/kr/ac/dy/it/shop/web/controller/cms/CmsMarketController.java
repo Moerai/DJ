@@ -9,16 +9,6 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class CmsMarketController {
 
-    //상품등록
-    @RequestMapping("/cms/market/productadd")
-    public String productadd(Model model, HttpSession session) {
-        if(session.getAttribute("id") == null)
-            return "redirect:/cms/login";
-
-
-        return "cms/market/productadd";
-    }
-
     //상품리스트
     @RequestMapping("/cms/market/productList")
     public String productList(Model model, HttpSession session) {
