@@ -30,21 +30,23 @@ public class MemberController {
     	
         return "member/register";
     }
-    @RequestMapping("/member/registerchecked")
-    public String registerchecked(Model model, HttpServletRequest request, HttpServletResponse response) {
-    	
-        return "member/registerchecked";
-    }
+    
     @RequestMapping("/member/registerfinish")
     public String registerFinish(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/registerfinish";
     }
     
-    @RequestMapping("/member/main")
-    public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("/")
+    public String main(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
         return "member/main";
+    }
+    
+    @RequestMapping("/member/Front")
+    public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
+    	
+        return "member/Front";
     }
 
 	
