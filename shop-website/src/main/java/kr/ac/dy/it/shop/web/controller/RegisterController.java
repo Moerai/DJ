@@ -15,19 +15,19 @@ public class RegisterController {
     @Autowired
     MemberService registerService;
     
-    @RequestMapping("/login/register")
+    @RequestMapping("/member/register")
     public String register(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
-        return "login/register";
+        return "member/register";
     }
-    @RequestMapping("/login/registerchecked")
+    @RequestMapping("/member/registerchecked")
     public String registerchecked(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
-        return "login/registerchecked";
+        return "member/registerchecked";
     }
-    @RequestMapping("/login/registerFinish")
+    @RequestMapping("/member/registerFinish")
     public String registerFinish(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
-        return "login/registerFinish";
+        return "member/registerFinish";
     }
 }
