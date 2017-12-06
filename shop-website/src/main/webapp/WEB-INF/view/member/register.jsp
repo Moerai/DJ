@@ -39,6 +39,7 @@
 						"studentNum" : $("#studentNum").val()
 					},
 					success : function(data) { //result를 받아올꺼죠
+						location.href = "member/login";
 						alert("회원가입에 성공했습니다.")
 					},
 				});

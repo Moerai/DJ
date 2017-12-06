@@ -18,7 +18,7 @@
 			</div>
 			<br> <br> <br>
 			<div class="login-form">
-				<a class="btn btn-primary btn-large btn-block" href="loginpage">로그인</a>
+				<a class="btn btn-primary btn-large btn-block" href="login">로그인</a>
 				<br><br>
 				<a class="btn btn-primary btn-large btn-block" href="register">회원가입</a>
  

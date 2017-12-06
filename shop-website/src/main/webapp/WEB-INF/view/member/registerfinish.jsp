@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<form action ="loginpage" method = "post">
+<form action ="login" method = "post">
     <div class= "txt-location">
         <div class="txt-location1">
 
