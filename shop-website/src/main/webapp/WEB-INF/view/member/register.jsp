@@ -63,8 +63,8 @@
 	$(function() {
 
 		$("#registerForm").on("submit", function() {
-			registerCheckFunction();
 			check();
+			registerCheckFunction();
 			return false;
 		});
 	});
