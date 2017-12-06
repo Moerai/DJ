@@ -38,31 +38,31 @@ th {
 		<table align="center">
 			<tr>
 				<th>회원이름</th>
-				<td>${member.userName}</td>
+				<td><input type ="text" value ="${member.userName}"></td>
 			</tr>
 			<tr>
 				<th>회원상태</th>
-				<td>${member.state}</td>
+				<td><input type ="text" value ="${member.state}"></td>
 			</tr>
 			<tr>
 				<th>아이디</th>
-				<td>${member.userId}</td>
+				<td><input type ="text" value ="${member.userId}"></td>
 			</tr>
 			<tr>
 				<th>닉네임</th>
-				<td>${member.nickName}</td>
+				<td><input type ="text" value ="${member.nickName}"></td>
 			</tr>
 			<tr>
 				<th>핸드폰</th>
-				<td>${member.phone}</td>
+				<td><input type ="text" value ="${member.phone}"></td>
 			</tr>
 			<tr>
 				<th>주소</th>
-				<td>${member.address}</td>
+				<td><input type ="text" value ="${member.address}"></td>
 			</tr>
 			<tr>
 				<th>학번</th>
-				<td>${member.studentNum}</td>
+				<td><input type ="text" value ="${member.studentNum}"></td>
 			</tr>
 		</table>
 
