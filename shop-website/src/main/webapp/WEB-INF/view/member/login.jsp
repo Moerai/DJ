@@ -27,9 +27,6 @@
 	 			dataType: "json",
 	 			data :  {"userId" : $("#userId").val(),
 	 					"password" : $("#password").val() },
-	 			beforsend : function() {
-	 				$("#spinner").html("<img src="../images/" />")
-	 			}
 	 			success : function(data) {
 	 				if (data.userId == userId) {
 	 					alert(data.userName + "님 환영합니다");
