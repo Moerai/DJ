@@ -1,0 +1,51 @@
+* {
+	box-sizing: border-box;
+}
+*:focus {
+	
+}
+body {
+	font-family: Arial; background-color: rgb(37, 172, 161);
+}
+.jauboard {
+	margin: 20px auto; width: 100%;
+}
+.jauboard-screen {
+	border-radius: 10px; background-color: rgb(255, 255, 255);
+}
+.app-title {
+	text-align: center; color: rgb(119, 119, 119);
+}
+.login-form {
+	text-align: center; padding-bottom: 10px;
+}
+.control-group {
+	margin-bottom: 10px;
+}
+input {
+	padding: 10px 0px; border-radius: 3px; border: 2px solid transparent; transition:border 0.5s; border-image: none; width: 250px; text-align: center; font-size: 16px; font-weight: 200; background-color: rgb(236, 240, 241);
+}
+input:focus {
+	border: 2px solid rgb(52, 152, 219); border-image: none; box-shadow: none;
+}
+.btn {
+	background: rgb(37, 172, 161); margin: 0px auto; padding: 10px 0px; border-radius: 3px; border: 2px solid transparent; transition:0.25s; border-image: none; width: 100px; color: rgb(255, 255, 255); line-height: 20px; font-size: 16px; text-decoration: none; display: block; box-shadow: none; text-shadow: none;
+}
+.btn:hover {
+	background-color: rgb(41, 128, 185);
+}
+.login-link {
+	color: rgb(68, 68, 68); font-size: 12px; margin-top: 12px; display: block;
+}
+.img {
+	text-align: center; margin-right: auto; margin-left: auto; display: block;
+}
+table.type00 {
+	text-align: center; line-height: 1.5; margin-right: auto; margin-left: auto; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; border-collapse: separate; border-spacing: 1px;
+}
+table.type00 th {
+	padding: 10px; width: 150px; font-weight: bold; vertical-align: top; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+table.type00 td {
+	padding: 10px; width: 350px; vertical-align: top; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
