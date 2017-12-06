@@ -20,4 +20,8 @@ public class Member {
 	String phone;
 	String address;
 	String studentNum;
+	
+	//회원등급관련	
+	String memberLevel;
+	int memberCount;
 }
