@@ -63,18 +63,11 @@ adption {
 			</tr>
 		</c:forEach>
 	</TABLE>
-	<br>
-	<br>
-	<br>
+	<br><br><br>
 	<div id="aa">
 		<input type="button" style="width: 100px; height: 50px" value="등록">
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-
+	<br><br><br><br><br>
 	<TABLE align="center">
 		<tr>
 			<th>이름</th>
