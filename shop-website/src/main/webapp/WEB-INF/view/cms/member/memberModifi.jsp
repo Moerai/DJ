@@ -5,27 +5,68 @@
   Time: 오후 4:17
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <html>
 <head>
-    <title>회원정보수정</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/styles/hal.css" rel="stylesheet" type="text/css">
+<title>회원정보수정</title>
+<style>
+table, th, td {
+	text-align: center;
+	border: 1px solid gray;
+	border-collapse: collapse;
+}
+
+th, td {
+	width: 100px;
+	padding: 5px;
+}
+
+th {
+	background: #D5D5D5;
+}
+</style>
 </head>
 <body>
-<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
-<jsp:include page="/WEB-INF/view/cms/member/member_sidebar.jsp" ></jsp:include>
-<div id="full">
+	<jsp:include page="/WEB-INF/view/cms/top_menu.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/view/cms/member/member_sidebar.jsp"></jsp:include>
+	<div id="full">
+		<h1 align="center">
+			<br>${member.userName} 회원의 수정페이지 <br> <br>
+		</h1>
+		<table align="center">
+			<tr>
+				<th>회원이름</th>
+				<td>${member.userName}</td>
+			</tr>
+			<tr>
+				<th>회원상태</th>
+				<td>${member.state}</td>
+			</tr>
+			<tr>
+				<th>아이디</th>
+				<td>${member.userId}</td>
+			</tr>
+			<tr>
+				<th>닉네임</th>
+				<td>${member.nickName}</td>
+			</tr>
+			<tr>
+				<th>핸드폰</th>
+				<td>${member.phone}</td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td>${member.address}</td>
+			</tr>
+			<tr>
+				<th>학번</th>
+				<td>${member.studentNum}</td>
+			</tr>
+		</table>
 
-    <tr>
-        <tr>회원이름 : <input type="text" value="${member.userName}"></tr>
-        <tr>회원상태 : <input type="text" value="${member.state}"></tr>
-        <tr>아이디 : ${member.userId}</tr>
-        <tr>닉네임 : <input type="text" value="${member.nickName }"></tr>
-        <tr>헨드폰 : <input type="text" value="${member.phone}"></tr>
-        <tr>주소 : <input type="text" value="${member.address}"></tr>
-        <tr>학번 : <input type="text" value="${member.studentNum}"></tr>
-    </tr>
-
-</div>
+	</div>
 
 
 </body>
