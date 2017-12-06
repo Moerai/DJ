@@ -11,7 +11,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 
-<<head>
+<head>
 <meta charset="utf-8"/>
 <title>대중 관리자 홈페이지</title>
 <style>
@@ -34,7 +34,6 @@
     <div id="sidebar">
         <ul>
             <li><h1>장터관리</h1></li> 
-            <li><a href="../market/productadd">-상품 등록</a></li>
             <li><a href="../market/productList">-상품리스트</a></li>
             <li><a href="../market/productProhibit">-금지어관리</a></li>
         </ul>
