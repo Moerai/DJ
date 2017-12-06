@@ -16,6 +16,11 @@ public interface MemberDao {
 
 	Member selectUserByUserId(Member parameter);
 
+	
+	/**
+	 * 멤버의 등급별 회원수를 리턴함
+	 */
+	List<Member> selectExp(Member parameter);
 
 
 }
