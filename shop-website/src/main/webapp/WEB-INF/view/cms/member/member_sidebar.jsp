@@ -11,7 +11,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 
-<<head>
+<head>
 <meta charset="utf-8"/>
 <title>대중 관리자 홈페이지</title>
 <style>

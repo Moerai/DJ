@@ -47,30 +47,46 @@ adption {
 			<th width="200px">추가 적립</th>
 			<th>할인</th>
 		</tr>
+				
+		<c:forEach var="x" items="${members}" varStatus="i">
 		<tr> 
-			<th>브론즈</th>
-			<td>0 ~ 5점</td>
-			<td></td>
+			<th>
+				${x.memberLevel}
+			</th>
+			<td>
+				<c:if test="${i.index eq 0}">
+					0 ~ 4점	
+				</c:if>
+				<c:if test="${i.index eq 1}">
+					5 ~ 9점	
+				</c:if>
+				
+			</td>
+			<td>
+				${x.memberCount}
+			</td>
 			<td>X</td>
 			<td>0%</td>
 		</tr>
+		</c:forEach>
+		<!-- 
 		<tr>
 			<th>실버</th>
-			<td>5 ~ 10점</td>
+			<td>5 ~ 9점</td>
 			<td></td>
 			<td>X</td>
 			<td>10%</td>
 		</tr>
 		<tr>
 			<th>골드</th>
-			<td>10 ~ 15점</td>
+			<td>10 ~ 14점</td>
 			<td></td>
 			<td>X</td>
 			<td>20%</td>
 		</tr>
 		<tr>
 			<th>다이아</th>
-			<td>15 ~ 20점</td>
+			<td>15 ~ 19점</td>
 			<td></td>
 			<td>X</td>
 			<td>30%</td>
@@ -82,7 +98,7 @@ adption {
 			<td>파워등록 1회 <br> 글씨체 강조 1회 <br> 색상 강조 1회
 			</td>
 			<td>40%</td>
-		</tr>
+		</tr> -->
 	</table>
 </body>
 </html>

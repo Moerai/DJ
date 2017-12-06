@@ -58,7 +58,7 @@ th {
 			</tr>
 			<tr>
 				<th>주소</th>
-				<td><input type ="text" value ="${member.address}"></td>
+				<td><input type ="text" value ="${member.address}"></td>.
 			</tr>
 			<tr>
 				<th>학번</th>

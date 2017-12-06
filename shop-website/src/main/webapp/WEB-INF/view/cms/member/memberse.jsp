@@ -51,16 +51,24 @@ adption {
 			<th>회원상태</th>
 		</tr>
 
-
 		<c:forEach var="member" items="${members}">
+		<c:if test="${member.state eq 0}">
 			<tr>
 				<td align="center"><input type=checkbox>
 					${member.userName}</td>
 				<td align="center">${member.userId }</td>
 				<td align="center">${member.password }</td>
 				<td align="center">${member.phone}</td>
-				<td align="center">${member.state}</td>
+				<td align="center">			
+					<c:if test="${member.state eq 0}">
+						가입
+					</c:if>
+					<c:if test="${member.state eq 1}">
+						탈퇴
+					</c:if>
+				</td>
 			</tr>
+		</c:if>
 		</c:forEach>
 	</TABLE>
 	<br><br><br>
@@ -76,6 +84,26 @@ adption {
 			<th>휴대전화</th>
 			<th>회원상태</th>
 		<tr>
+		
+		<c:forEach var="member" items="${members}">
+		<c:if test="${member.state eq 1}">
+			<tr>
+				<td align="center"><input type=checkbox>
+					${member.userName}</td>
+				<td align="center">${member.userId }</td>
+				<td align="center">${member.password }</td>
+				<td align="center">${member.phone}</td>
+				<td align="center">			
+					<c:if test="${member.state eq 0}">
+						가입
+					</c:if>
+					<c:if test="${member.state eq 1}">
+						탈퇴
+					</c:if>
+				</td>
+			</tr>
+		</c:if>
+		</c:forEach>
 
 	</TABLE>
 </body>
