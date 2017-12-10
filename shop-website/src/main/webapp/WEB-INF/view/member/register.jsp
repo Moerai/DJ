@@ -38,7 +38,35 @@
 		}
 		
 	}
-	
+	function idcheck(){
+		var id = $("#userId").val();
+		$.ajax({
+			type : 'POST',
+			url : '/api/member/check',
+			contentType : "application/x-www-form-urlencoded; charset=utf-8",
+			dataType : "json", //여기로 가서 function을 실행할꺼에요
+			data : {
+				"userId" : $("#userId").val(),
+			}
+			success: function(result){
+				if(result == 1){
+					alert("사용할 수 있는 아이디 입니다.");
+					
+				}
+				else{
+					alert("사용할 수 없는 아이디 입니다.");
+				}
+				
+			}
+				}
+			}
+	function setselecte(){
+		 var email = $("#email option:selected").text();
+		 $('.text1').val(email);
+	}
+	function setselectp(){
+		 var phone = $("#phone option:selected").text();
+
 	function registerCheckFunction() {
 		//ajax : jquery안에 포함되어있는 것
 		$
@@ -54,7 +82,7 @@
 						"nickName" : $("#nickName").val(),
 						"emailid" : ($("#emailid").val() + "@" + $("#emailaddr")
 								.val()),
-						"phone" : $("indexNo").val() + $("#phone2").val()
+						"phone" : $("phone1").val() + $("#phone2").val()
 								+ $("#phone3").val(),
 						"address" : $("#address").val(),
 						"studentNum" : $("#studentNum").val()
@@ -83,25 +111,26 @@
 		<form id="registerForm">
 			<tr>
 				<td class="name">이름</td>
-				<td><input type="name" id="userName" /></td>
+				<td><input type="name" id="userName" placeholder ="이름을 입력해주세요" /></td>
 			</tr>
 			<tr>
 				<td class="td">닉네임</td>
-				<td><input type="text" id="nickName" /> <input type="button"
+				<td><input type="text" id="nickName"  placeholder ="닉네임을 입력해주세요" /> <input type="button"
 					value="중복확인" /></td>
 			</tr>
 			<tr>
 				<td class="td">아이디</td>
-				<td><input type="text" id="userId" /></td>
+				<td><input type="text" id="userId" placeholder ="아이디를 입력해주세요"  /> <input type="button"
+					value="중복확인" onclick = "idcheck();"/></td>
 			</tr>
 			<tr>
 				<td class="td">비밀번호</td>
-				<td><input type="password" id="password" /></td>
+				<td><input type="password" id="password"  placeholder ="비밀번호를 입력해주세요" /></td>
 			</tr>
 
 			<td class="td">비밀번호확인</td>
 			<td><input type="password" id="passwordcheck"
-				oninput="checkPwd()" /></td>
+				oninput="checkPwd()"  placeholder ="비밀번호 확인을 입력해주세요" /></td>
 
 			</tr>
 			<script type="text/javascript">
@@ -117,25 +146,21 @@
 			</script>
 			<tr>
 				<td class="td">이메일</td>
-				<td><input type="text" id="emailid" />@ <input type="text"
-					id="emailaddr" /> &nbsp;&nbsp;<select>
+				<td><input type="text" id="emailid" />@ <input type="text"id="emailaddr" />
+				 &nbsp;&nbsp;<select id = "email" onchange = "setselecte();">
+						
 						<option>naver.com</option>
 						<option>daum.net</option>
-						<option>gmail.com</option>
+						<option>gmail.com</option> 
 						<option>nate.com</option>
+						<option></option>
 				</select></td>
+
 			</tr>
 			<tr>
 				<td class="td">휴대전화</td>
-				<td><select class="phone1">
-						<script type="text/javascript">
-							var test = document
-									.getElementsByClassName("phone1");
-							// test 변수에 selectTest란 클래스명을 가진 요소를 저장
-
-							var indexNo = test[0].selectedIndex;
-							// test 변수의 선택된 값을 indexNo에 저장
-						</script>
+				<td><select class="phone1" onchange = "setselectp();" id ="phone" name ="phone" >
+					
 						<option>010</option>
 						<option>011</option>
 						<option>016</option>
