@@ -15,9 +15,9 @@ public class FrontController {
     @Autowired
     MemberService memberService;
     
-    @RequestMapping("/login/Front")
+    @RequestMapping("/login/front")
     public String index(Model model, HttpServletRequest request, HttpServletResponse response) {
     	
-        return "login/Front";
+        return "login/front";
     }
 }
