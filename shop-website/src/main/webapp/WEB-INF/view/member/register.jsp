@@ -21,16 +21,22 @@
 <script type="text/javascript">
 	//registerCheckFunction->button ID CHECK를 누르면 실행되는 함수
 	function check() {
-		var name = document.getElementById('userName');
-		var id = document.getElementById('userId');
-		if (name.value == '' || name.value == null) {
+		var name =$("#userName").val();
+		var id = $("#userId").val();
+		var pw = $("#password").val();
+		if (name == "" || name == null) {
 			alert('이름을 입력해주세요');
 			return false;
 		}
-		if (id.value == '' || id.value == null) {
+		if (id == "" || id== null) {
 			alert('아이디를 입력해주세요');
 			return false;
 		}
+		if (pw == "" || pw == null) {
+			alert('비밀번호를 입력해주세요');
+			return false;
+		}
+		
 	}
 	
 	function registerCheckFunction() {
