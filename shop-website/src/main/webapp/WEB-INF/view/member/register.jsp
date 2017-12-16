@@ -38,41 +38,18 @@
 		}
 		
 	}
-	<!--function idcheck(){
-		var id = $("#userId").val();
-		$.ajax({
-			type : 'POST',
-			url : '/api/member/check',
-			contentType : "application/x-www-form-urlencoded; charset=utf-8",
-			dataType : "json", //여기로 가서 function을 실행할꺼에요
-			data : {
-				"userId" : $("#userId").val(),
-			},
-			success: function(result){
-				if(result == 1){
-					alert("사용할 수 있는 아이디 입니다.");
-					
-				}
-				else{
-					alert("사용할 수 없는 아이디 입니다.");
-				}
-				
-			}
-				});
-			} -->
 	function setselecte(){
 		 var email = $("#email option:selected").text();
 		 $('.text1').val(email);
 	}
 	function setselectp(){
 		 var phone = $("#phone option:selected").text();
-
+	}
 	function registerCheckFunction() {
 		//ajax : jquery안에 포함되어있는 것
-		$
-				.ajax({
-					type : 'POST',
-					url : '/api/member/register',
+		$.ajax({
+					type : "POST",
+					url : "/api/member/register",
 					contentType : "application/x-www-form-urlencoded; charset=utf-8",
 					dataType : "json", //여기로 가서 function을 실행할꺼에요
 					data : {
@@ -80,7 +57,7 @@
 						"userId" : $("#userId").val(),
 						"password" : $("#password").val(),
 						"nickName" : $("#nickName").val(),
-						"emailid" : ($("#emailid").val() + "@" + $("#emailaddr")
+						"email" : ($("#emailid").val() + "@" + $("#emailaddr")
 								.val()),
 						"phone" : $("phone1").val() + $("#phone2").val()
 								+ $("#phone3").val(),
@@ -88,14 +65,14 @@
 						"studentNum" : $("#studentNum").val()
 					},
 					success : function(data) { //result를 받아올꺼죠
+						
+						alert("회원가입에 성공했습니다.");
 						location.href = "registerfinish";
-						alert("회원가입에 성공했습니다.")
 					},
 				});
 	}
 
 	$(function() {
-
 		$("#registerForm").on("submit", function() {
 			check();
 			registerCheckFunction();
@@ -106,9 +83,8 @@
 </head>
 
 <body>
-	<table border="2" bgcolor="" align="center" class="table"
-		cellpadding="5">
-		<form id="registerForm">
+	<table border="2" bgcolor="" align="center" class="table" cellpadding="5">
+		<form id="registerForm" method="post">
 			<tr>
 				<td class="name">이름</td>
 				<td><input type="name" id="userName" placeholder="이름을 입력해주세요" /></td>
@@ -173,20 +149,19 @@
 			</tr>
 			<tr>
 				<td class="td">주소</td>
-				<td><input type="text" id="address" />
+				<td><input type="text" id="address" /></td>
 			</tr>
 
 			<tr>
 				<td class="td">학번</td>
-				<td><input type="text" id="studentNum" />
+				<td><input type="text" id="studentNum"></td>
 			</tr>
 
 			<tr>
-				<td colspan="2" align="center"><input type="submit"
-					value="회원가입" /></td>
+				<td colspan="2" align="center"><button class="btn btn-primary btn-large btn-block" id="btnLogin">회원가입</button></td>
 			</tr>
-	</table>
 	</form>
+	</table>
 </body>
 
 </html>
