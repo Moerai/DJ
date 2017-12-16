@@ -27,6 +27,7 @@
 	</typeAliases>
 	<mappers>
 		<!--<package name="mybatis.mapper"/>-->
+		<mapper resource="mybatis/mapper/BoardDao.xml"/>
 		<mapper resource="mybatis/mapper/MemberDao.xml"/>
 		<mapper resource="mybatis/mapper/cmsMemberDao.xml"/>
 	</mappers>
