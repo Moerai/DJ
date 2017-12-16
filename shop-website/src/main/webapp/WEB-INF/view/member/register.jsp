@@ -15,7 +15,7 @@
 	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>Document</title>
 <center>
-	<img src="/images/DJ-Logo.png" width="20%">
+	<img src="../images/logo.png" width="20%">
 </center>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script type="text/javascript">
@@ -45,6 +45,25 @@
 	function setselectp(){
 		 var phone = $("#phone option:selected").text();
 	}
+	
+	function idCheck() {
+		var userId = $("#userId").val();
+		$.ajax({
+ 			type: "POST",
+ 			url : "/api/member/idcheck",
+ 			contentType: "application/x-www-form-urlencoded; charset=utf-8",
+ 			dataType: "json",
+ 			data :  {"userId" : $("#userId").val()},
+ 			success : function(data) {
+ 					if(data.userId == userId || data.userId == ""){
+ 					alert("이미 사용중이거나 사용할 수 없는 아이디 입니다.");
+ 				}
+ 			},
+ 			error : function(request, status, errorThrown) {
+ 				alert("사용가능한 아이디 입니다.");
+ 			}
+ 		});
+	}
 	function registerCheckFunction() {
 		//ajax : jquery안에 포함되어있는 것
 		$.ajax({
@@ -71,7 +90,7 @@
 					},
 				});
 	}
-
+	
 	$(function() {
 		$("#registerForm").on("submit", function() {
 			check();
@@ -97,7 +116,7 @@
 			<tr>
 				<td class="td">아이디</td>
 				<td><input type="text" id="userId" placeholder="아이디를 입력해주세요" />
-					<input type="button" value="중복확인" onclick="idcheck();" /></td>
+					<input type="button" value="중복확인" onclick="idCheck();" /></td>
 			</tr>
 			<tr>
 				<td class="td">비밀번호</td>
