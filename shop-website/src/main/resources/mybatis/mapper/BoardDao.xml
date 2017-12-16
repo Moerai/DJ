@@ -22,6 +22,6 @@
 
     <select id="boardSelect" parameterType="kr.ac.dy.it.shop.biz.dto.Board" resultType="kr.ac.dy.it.shop.biz.dto.Board">
         SELECT *
-        FROM BOARD;
+        FROM BOARD
     </select>
 </mapper>
