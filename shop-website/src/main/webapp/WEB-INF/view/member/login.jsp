@@ -30,7 +30,7 @@
 	 			success : function(data) {
 	 				if (data.userId == userId) {
 	 					alert(data.userName + "님 환영합니다");
-	 					location.href = "/";	
+	 					location.href = "/board/list";	
 	 				} else {
 	 					alert("아이디 및 비밀번호가 틀립니다.");
 	 				}
