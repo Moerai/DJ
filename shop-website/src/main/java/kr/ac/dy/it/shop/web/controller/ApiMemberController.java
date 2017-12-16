@@ -27,7 +27,12 @@ public class ApiMemberController {
 	        return member;
 	    }
 	
-	
+	@RequestMapping("/api/member/idcheck")
+	@ResponseBody
+	public Member idCheck(String userId, HttpSession sesstion, HttpServletRequest request, HttpServletResponse response) {
+	        Member member = memberService.getMemberByUserId(userId);
+	        return member;
+	    }
 	
 
 	@RequestMapping("/api/member/register")
@@ -36,7 +41,6 @@ public class ApiMemberController {
 			Member parameter) {
 
 		boolean result= memberService.addMember(parameter);
-		parameter.setUserName(parameter.getUserName() + "바보");
 
 		return new ResponseData<Object>(result,(result ? "회원가입 성공":"회원가입 실패"));
 		
