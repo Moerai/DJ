@@ -38,7 +38,7 @@
 		}
 		
 	}
-	function idcheck(){
+	<!--function idcheck(){
 		var id = $("#userId").val();
 		$.ajax({
 			type : 'POST',
@@ -47,7 +47,7 @@
 			dataType : "json", //여기로 가서 function을 실행할꺼에요
 			data : {
 				"userId" : $("#userId").val(),
-			}
+			},
 			success: function(result){
 				if(result == 1){
 					alert("사용할 수 있는 아이디 입니다.");
@@ -58,8 +58,8 @@
 				}
 				
 			}
-				}
-			}
+				});
+			} -->
 	function setselecte(){
 		 var email = $("#email option:selected").text();
 		 $('.text1').val(email);
@@ -111,26 +111,27 @@
 		<form id="registerForm">
 			<tr>
 				<td class="name">이름</td>
-				<td><input type="name" id="userName" placeholder ="이름을 입력해주세요" /></td>
+				<td><input type="name" id="userName" placeholder="이름을 입력해주세요" /></td>
 			</tr>
 			<tr>
 				<td class="td">닉네임</td>
-				<td><input type="text" id="nickName"  placeholder ="닉네임을 입력해주세요" /> <input type="button"
-					value="중복확인" /></td>
+				<td><input type="text" id="nickName" placeholder="닉네임을 입력해주세요" />
+					<input type="button" value="중복확인" /></td>
 			</tr>
 			<tr>
 				<td class="td">아이디</td>
-				<td><input type="text" id="userId" placeholder ="아이디를 입력해주세요"  /> <input type="button"
-					value="중복확인" onclick = "idcheck();"/></td>
+				<td><input type="text" id="userId" placeholder="아이디를 입력해주세요" />
+					<input type="button" value="중복확인" onclick="idcheck();" /></td>
 			</tr>
 			<tr>
 				<td class="td">비밀번호</td>
-				<td><input type="password" id="password"  placeholder ="비밀번호를 입력해주세요" /></td>
+				<td><input type="password" id="password"
+					placeholder="비밀번호를 입력해주세요" /></td>
 			</tr>
 
 			<td class="td">비밀번호확인</td>
 			<td><input type="password" id="passwordcheck"
-				oninput="checkPwd()"  placeholder ="비밀번호 확인을 입력해주세요" /></td>
+				oninput="checkPwd()" placeholder="비밀번호 확인을 입력해주세요" /></td>
 
 			</tr>
 			<script type="text/javascript">
@@ -146,12 +147,13 @@
 			</script>
 			<tr>
 				<td class="td">이메일</td>
-				<td><input type="text" id="emailid" />@ <input type="text"id="emailaddr" />
-				 &nbsp;&nbsp;<select id = "email" onchange = "setselecte();">
-						
+				<td><input type="text" id="emailid" />@ <input type="text"
+					id="emailaddr" /> &nbsp;&nbsp;<select id="email"
+					onchange="setselecte();">
+
 						<option>naver.com</option>
 						<option>daum.net</option>
-						<option>gmail.com</option> 
+						<option>gmail.com</option>
 						<option>nate.com</option>
 						<option></option>
 				</select></td>
@@ -159,8 +161,9 @@
 			</tr>
 			<tr>
 				<td class="td">휴대전화</td>
-				<td><select class="phone1" onchange = "setselectp();" id ="phone" name ="phone" >
-					
+				<td><select class="phone1" onchange="setselectp();" id="phone"
+					name="phone">
+
 						<option>010</option>
 						<option>011</option>
 						<option>016</option>
